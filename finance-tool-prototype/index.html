@@ -1,0 +1,858 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Finance Tool Prototype — FIRE / Retirement / Passive Income</title>
+  <style>
+    :root{
+      --bg:#0b1020;
+      --panel:#111a33;
+      --panel2:#0f1730;
+      --text:#e8ecff;
+      --muted:#aeb7e6;
+      --brand:#78a6ff;
+      --ok:#45d483;
+      --warn:#ffcc66;
+      --bad:#ff6b6b;
+      --border:rgba(255,255,255,.10);
+      --shadow: 0 12px 35px rgba(0,0,0,.35);
+      --radius: 14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font-family:var(--sans);
+      background: radial-gradient(1200px 600px at 15% 0%, rgba(120,166,255,.25), transparent 55%),
+                  radial-gradient(900px 500px at 90% 10%, rgba(69,212,131,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+    }
+    .wrap{max-width:1080px; margin:0 auto; padding:20px 16px 60px;}
+    header{
+      display:flex; gap:14px; align-items:flex-start; justify-content:space-between;
+      padding:18px; border:1px solid var(--border); border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(17,26,51,.85), rgba(17,26,51,.55));
+      box-shadow: var(--shadow);
+    }
+    header h1{margin:0; font-size:18px; letter-spacing:.2px;}
+    header p{margin:6px 0 0; color:var(--muted); font-size:13px; line-height:1.35; max-width:60ch;}
+    .chipbar{display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end;}
+    .chip{font-size:12px; color:var(--muted); border:1px solid var(--border); padding:6px 10px; border-radius:999px; background:rgba(0,0,0,.18)}
+
+    .grid{display:grid; grid-template-columns: 320px 1fr; gap:14px; margin-top:14px;}
+    @media (max-width: 920px){ .grid{grid-template-columns:1fr;}}
+
+    nav{
+      border:1px solid var(--border); border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(17,26,51,.75), rgba(17,26,51,.42));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .nav-title{padding:14px 14px 8px; color:var(--muted); font-size:12px; letter-spacing:.12em; text-transform:uppercase;}
+    .navbtn{
+      width:100%; border:0; background:transparent; color:var(--text);
+      text-align:left; padding:12px 14px; cursor:pointer; font-size:14px;
+      display:flex; gap:10px; align-items:center;
+      border-top:1px solid rgba(255,255,255,.06);
+    }
+    .navbtn:hover{background:rgba(120,166,255,.10);}
+    .navbtn[aria-selected="true"]{
+      background: rgba(120,166,255,.18);
+      outline: 2px solid rgba(120,166,255,.30);
+      outline-offset:-2px;
+    }
+    .navicon{width:18px; height:18px; display:inline-grid; place-items:center; border-radius:6px; background:rgba(255,255,255,.08); color:var(--muted); font-family:var(--mono); font-size:12px;}
+
+    main{
+      border:1px solid var(--border); border-radius:var(--radius);
+      background: linear-gradient(180deg, rgba(17,26,51,.85), rgba(17,26,51,.52));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .panel{padding:16px; display:none;}
+    .panel.active{display:block;}
+
+    .panel h2{margin:0 0 4px; font-size:16px;}
+    .panel .sub{margin:0 0 14px; color:var(--muted); font-size:13px;}
+
+    .form{display:grid; grid-template-columns: 1fr 1fr; gap:10px;}
+    @media (max-width: 640px){ .form{grid-template-columns:1fr;}}
+
+    .field{border:1px solid rgba(255,255,255,.10); border-radius:12px; padding:10px; background:rgba(0,0,0,.16)}
+    label{display:flex; justify-content:space-between; gap:10px; color:var(--muted); font-size:12px; margin-bottom:6px;}
+    label .hint{font-family:var(--mono); opacity:.9;}
+    input, select{
+      width:100%; box-sizing:border-box; border:1px solid rgba(255,255,255,.16);
+      background: rgba(17,26,51,.65); color:var(--text);
+      padding:10px 10px; border-radius:10px; font-size:14px;
+      outline:none;
+    }
+    input:focus, select:focus{border-color: rgba(120,166,255,.55); box-shadow:0 0 0 3px rgba(120,166,255,.18)}
+
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:12px;}
+    .btn{
+      border:1px solid rgba(120,166,255,.55);
+      background: linear-gradient(180deg, rgba(120,166,255,.28), rgba(120,166,255,.12));
+      color:var(--text);
+      padding:10px 12px; border-radius:12px; cursor:pointer; font-size:14px;
+    }
+    .btn.secondary{
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(0,0,0,.14);
+      color:var(--muted);
+    }
+    .btn:active{transform: translateY(1px)}
+
+    .results{margin-top:14px; display:grid; grid-template-columns: 1.2fr .8fr; gap:12px;}
+    @media (max-width: 920px){ .results{grid-template-columns:1fr;}}
+
+    .card{border:1px solid rgba(255,255,255,.10); border-radius:14px; background:rgba(0,0,0,.14); padding:12px;}
+    .kpi{display:grid; grid-template-columns: 1fr 1fr; gap:10px;}
+    @media (max-width: 640px){ .kpi{grid-template-columns:1fr;}}
+    .k{padding:10px; border-radius:12px; background:rgba(17,26,51,.55); border:1px solid rgba(255,255,255,.08)}
+    .k .t{color:var(--muted); font-size:12px; margin-bottom:6px;}
+    .k .v{font-size:18px; font-family:var(--mono);}
+
+    .small{font-size:12px; color:var(--muted); line-height:1.4;}
+    .small code{font-family:var(--mono); color:rgba(232,236,255,.9)}
+
+    .chart{
+      width:100%; height:240px; border-radius:14px;
+      border:1px solid rgba(255,255,255,.08);
+      background: linear-gradient(180deg, rgba(15,23,48,.6), rgba(15,23,48,.25));
+      position:relative; overflow:hidden;
+    }
+    .chart svg{width:100%; height:100%; display:block;}
+
+    .toast{margin-top:12px; padding:10px 12px; border-radius:12px; border:1px solid rgba(255,255,255,.10); background: rgba(0,0,0,.16); color:var(--muted); font-size:12px;}
+    .toast strong{color:var(--text);}
+
+    footer{margin-top:14px; color:rgba(174,183,230,.75); font-size:12px;}
+    footer a{color:var(--brand); text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
+
+    .pill{display:inline-block; padding:2px 8px; border-radius:999px; border:1px solid rgba(255,255,255,.14); background:rgba(0,0,0,.12); color:var(--muted); font-size:12px; margin-left:6px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Finance Tool Prototype (Android-ready concept → HTML prototype)</h1>
+        <p>
+          Mass-market investing: fast answers for <span class="pill">FIRE</span><span class="pill">retirement</span><span class="pill">passive income</span><span class="pill">compound interest</span>.
+          This prototype focuses on clarity, guardrails, and “what to do next”.
+        </p>
+      </div>
+      <div class="chipbar">
+        <div class="chip">Prototype: vanilla HTML/CSS/JS</div>
+        <div class="chip">No backend</div>
+        <div class="chip">Currency: <span id="chipCurrency">USD</span></div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <nav aria-label="Tools">
+        <div class="nav-title">Calculators</div>
+        <button class="navbtn" data-tab="fire" aria-selected="true"><span class="navicon">F</span>FIRE calculator</button>
+        <button class="navbtn" data-tab="retirement"><span class="navicon">R</span>How much to retire</button>
+        <button class="navbtn" data-tab="passive"><span class="navicon">P</span>Passive income</button>
+        <button class="navbtn" data-tab="compound"><span class="navicon">C</span>Compound interest</button>
+        <button class="navbtn" data-tab="about"><span class="navicon">i</span>Product concept</button>
+      </nav>
+
+      <main>
+        <!-- FIRE -->
+        <section class="panel active" id="tab-fire" role="tabpanel">
+          <h2>FIRE calculator</h2>
+          <p class="sub">Estimate when you can reach financial independence based on savings rate, expected returns, and expenses.</p>
+
+          <div class="form">
+            <div class="field">
+              <label>Current age <span class="hint">years</span></label>
+              <input id="fire_age" type="number" min="0" step="1" value="30" />
+            </div>
+            <div class="field">
+              <label>Current invested assets <span class="hint" id="fire_assets_hint">$</span></label>
+              <input id="fire_assets" type="number" min="0" step="100" value="25000" />
+            </div>
+            <div class="field">
+              <label>Monthly take-home income <span class="hint" id="fire_income_hint">$/mo</span></label>
+              <input id="fire_income" type="number" min="0" step="50" value="4500" />
+            </div>
+            <div class="field">
+              <label>Monthly expenses <span class="hint" id="fire_expenses_hint">$/mo</span></label>
+              <input id="fire_expenses" type="number" min="0" step="50" value="2500" />
+            </div>
+            <div class="field">
+              <label>Real return (after inflation) <span class="hint">%/yr</span></label>
+              <input id="fire_return" type="number" step="0.1" value="5.0" />
+            </div>
+            <div class="field">
+              <label>Safe withdrawal rate (SWR) <span class="hint">%/yr</span></label>
+              <input id="fire_swr" type="number" step="0.1" value="4.0" />
+            </div>
+          </div>
+
+          <div class="row">
+            <button class="btn" id="fire_calc">Calculate</button>
+            <button class="btn secondary" data-reset="fire">Reset</button>
+            <div class="small">Assumes constant savings and constant real return. Not financial advice.</div>
+          </div>
+
+          <div class="results">
+            <div class="card">
+              <div class="kpi" id="fire_kpi"></div>
+              <div class="toast" id="fire_toast"></div>
+            </div>
+            <div class="card">
+              <div class="small" style="margin-bottom:10px;">Projected portfolio vs target</div>
+              <div class="chart" id="fire_chart"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Retirement (how much to retire) -->
+        <section class="panel" id="tab-retirement" role="tabpanel">
+          <h2>How much to retire</h2>
+          <p class="sub">Given desired monthly spending and SWR, compute the target portfolio size (and a simple buffer).</p>
+
+          <div class="form">
+            <div class="field">
+              <label>Desired monthly spending <span class="hint" id="ret_spend_hint">$/mo</span></label>
+              <input id="ret_spend" type="number" min="0" step="50" value="3000" />
+            </div>
+            <div class="field">
+              <label>Safe withdrawal rate (SWR) <span class="hint">%/yr</span></label>
+              <input id="ret_swr" type="number" step="0.1" value="4.0" />
+            </div>
+            <div class="field">
+              <label>Safety buffer <span class="hint">%</span></label>
+              <input id="ret_buffer" type="number" step="1" value="15" />
+            </div>
+            <div class="field">
+              <label>Currency</label>
+              <select id="currency">
+                <option value="USD" selected>USD ($)</option>
+                <option value="EUR">EUR (€)</option>
+                <option value="GBP">GBP (£)</option>
+                <option value="MYR">MYR (RM)</option>
+                <option value="SGD">SGD (S$)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <button class="btn" id="ret_calc">Calculate</button>
+            <button class="btn secondary" data-reset="retirement">Reset</button>
+            <div class="small">Rule-of-thumb: Target ≈ yearly spending / SWR.</div>
+          </div>
+
+          <div class="results">
+            <div class="card">
+              <div class="kpi" id="ret_kpi"></div>
+              <div class="toast" id="ret_toast"></div>
+            </div>
+            <div class="card">
+              <div class="small" style="margin-bottom:10px;">Targets (base vs buffered)</div>
+              <div class="chart" id="ret_chart"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Passive income -->
+        <section class="panel" id="tab-passive" role="tabpanel">
+          <h2>Passive income calculator</h2>
+          <p class="sub">Compute required portfolio to generate a target monthly passive income under a yield or SWR assumption.</p>
+
+          <div class="form">
+            <div class="field">
+              <label>Target passive income <span class="hint" id="pass_income_hint">$/mo</span></label>
+              <input id="pass_income" type="number" min="0" step="50" value="2000" />
+            </div>
+            <div class="field">
+              <label>Method</label>
+              <select id="pass_method">
+                <option value="swr" selected>SWR (total return drawdown)</option>
+                <option value="yield">Yield (dividend/interest only)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>SWR <span class="hint">%/yr</span></label>
+              <input id="pass_swr" type="number" step="0.1" value="4.0" />
+            </div>
+            <div class="field">
+              <label>Yield <span class="hint">%/yr</span></label>
+              <input id="pass_yield" type="number" step="0.1" value="3.0" />
+            </div>
+            <div class="field">
+              <label>Tax drag (rough) <span class="hint">% of income</span></label>
+              <input id="pass_tax" type="number" step="1" value="0" />
+            </div>
+            <div class="field">
+              <label>Notes</label>
+              <select id="pass_profile">
+                <option value="simple" selected>Simple (no reinvestment)</option>
+                <option value="conservative">Conservative (add +10% buffer)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <button class="btn" id="pass_calc">Calculate</button>
+            <button class="btn secondary" data-reset="passive">Reset</button>
+            <div class="small">Yield method ignores price appreciation; SWR uses total return drawdown.</div>
+          </div>
+
+          <div class="results">
+            <div class="card">
+              <div class="kpi" id="pass_kpi"></div>
+              <div class="toast" id="pass_toast"></div>
+            </div>
+            <div class="card">
+              <div class="small" style="margin-bottom:10px;">Required portfolio (method comparison)</div>
+              <div class="chart" id="pass_chart"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Compound -->
+        <section class="panel" id="tab-compound" role="tabpanel">
+          <h2>Compound interest</h2>
+          <p class="sub">Project portfolio growth with monthly contributions. Includes a simple growth chart.</p>
+
+          <div class="form">
+            <div class="field">
+              <label>Starting principal <span class="hint" id="cmp_p_hint">$</span></label>
+              <input id="cmp_p" type="number" min="0" step="100" value="10000" />
+            </div>
+            <div class="field">
+              <label>Monthly contribution <span class="hint" id="cmp_c_hint">$/mo</span></label>
+              <input id="cmp_c" type="number" min="0" step="50" value="500" />
+            </div>
+            <div class="field">
+              <label>Annual return (nominal) <span class="hint">%/yr</span></label>
+              <input id="cmp_r" type="number" step="0.1" value="7.0" />
+            </div>
+            <div class="field">
+              <label>Years <span class="hint">yrs</span></label>
+              <input id="cmp_years" type="number" min="1" step="1" value="20" />
+            </div>
+            <div class="field">
+              <label>Compounding</label>
+              <select id="cmp_freq">
+                <option value="12" selected>Monthly</option>
+                <option value="1">Yearly</option>
+                <option value="365">Daily (approx)</option>
+              </select>
+            </div>
+            <div class="field">
+              <label>Inflation (optional) <span class="hint">%/yr</span></label>
+              <input id="cmp_infl" type="number" step="0.1" value="0.0" />
+            </div>
+          </div>
+
+          <div class="row">
+            <button class="btn" id="cmp_calc">Calculate</button>
+            <button class="btn secondary" data-reset="compound">Reset</button>
+            <div class="small">If inflation is set, we show both nominal and real (rough) projections.</div>
+          </div>
+
+          <div class="results">
+            <div class="card">
+              <div class="kpi" id="cmp_kpi"></div>
+              <div class="toast" id="cmp_toast"></div>
+            </div>
+            <div class="card">
+              <div class="small" style="margin-bottom:10px;">Projection</div>
+              <div class="chart" id="cmp_chart"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="panel" id="tab-about" role="tabpanel">
+          <h2>Concept: Android finance tool for mass-market investors</h2>
+          <p class="sub">What we are building, for whom, and why it wins.</p>
+
+          <div class="card">
+            <div class="small">
+              <p><strong>Target user:</strong> mass investing segment (new to investing or “busy professional”). They want quick, confident answers like “how much do I need to retire?” without a spreadsheet.</p>
+              <p><strong>Core value:</strong> convert vague goals → a <em>number</em> + a <em>plan</em> (next actions).</p>
+              <p><strong>Key principles:</strong></p>
+              <ul>
+                <li><strong>One-screen inputs</strong>, immediate results, sensible defaults.</li>
+                <li><strong>Guardrails</strong>: show assumptions (SWR, inflation) and warn about unrealistic inputs.</li>
+                <li><strong>Explainability</strong>: “where the number comes from” in plain language.</li>
+                <li><strong>Privacy-first</strong>: offline calculators; optional cloud sync later.</li>
+              </ul>
+              <p><strong>MVP modules:</strong></p>
+              <ol>
+                <li>Compound growth (principal + monthly contribution)</li>
+                <li>Retirement target (monthly spending + SWR)</li>
+                <li>FIRE timeline (assets + savings rate + real return)</li>
+                <li>Passive income (SWR vs yield)</li>
+              </ol>
+              <p><strong>Monetization (later):</strong> premium scenarios (multiple portfolios), export PDF, tax presets by country, Monte Carlo, coaching prompts.</p>
+              <p><strong>Android implementation sketch:</strong> Kotlin + Jetpack Compose, local persistence (Room/DataStore), charts (MPAndroidChart or Compose Canvas), optional onboarding wizard.</p>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:12px;">
+            <div class="small">
+              <strong>Prototype notes</strong>
+              <ul>
+                <li>This HTML is intentionally “Android-like”: big tap targets, cards, simple nav.</li>
+                <li>Math is simplified; production should include scenario ranges and country-specific caveats.</li>
+              </ul>
+            </div>
+          </div>
+
+          <footer>
+            Built as a static prototype. Next step: turn this into a WebView demo inside Android Studio or rewrite in Compose.
+          </footer>
+        </section>
+      </main>
+    </div>
+  </div>
+
+<script>
+  // ------------------------
+  // Utilities
+  // ------------------------
+  const $ = (id) => document.getElementById(id);
+
+  const currencySymbols = {
+    USD: '$',
+    EUR: '€',
+    GBP: '£',
+    MYR: 'RM',
+    SGD: 'S$'
+  };
+
+  function fmtMoney(value, currency='USD'){
+    const sym = currencySymbols[currency] ?? '$';
+    if (!isFinite(value)) return sym + '—';
+    const abs = Math.abs(value);
+    const opts = { maximumFractionDigits: abs >= 100 ? 0 : 2 };
+    // Use Intl when possible
+    try {
+      const nf = new Intl.NumberFormat(undefined, opts);
+      return sym + nf.format(value);
+    } catch {
+      return sym + String(Math.round(value));
+    }
+  }
+
+  function fmtNum(value){
+    if (!isFinite(value)) return '—';
+    try { return new Intl.NumberFormat(undefined, { maximumFractionDigits: 2 }).format(value); }
+    catch { return String(value); }
+  }
+
+  function clamp(x, a, b){ return Math.min(b, Math.max(a, x)); }
+
+  function kpi(el, items){
+    el.innerHTML = items.map(it => `
+      <div class="k">
+        <div class="t">${it.t}</div>
+        <div class="v">${it.v}</div>
+      </div>
+    `).join('');
+  }
+
+  function toast(el, html){
+    el.innerHTML = html;
+  }
+
+  function warnText(messages){
+    if (!messages.length) return `<strong>Assumptions:</strong> constant contributions and constant rates. Try sensitivity: change return/SWR ±1%.`;
+    return `<strong>Checks:</strong><br/>` + messages.map(m => `• ${m}`).join('<br/>');
+  }
+
+  // Minimal SVG sparkline chart
+  function renderLineChart(container, points, {minY=null, maxY=null, labelA='', labelB=''} = {}){
+    container.innerHTML = '';
+    if (!points || points.length < 2) {
+      container.innerHTML = `<div class="small" style="padding:12px;">Not enough data to chart.</div>`;
+      return;
+    }
+    const W = 900, H = 320, pad = 26;
+    const xs = points.map(p => p.x);
+    const ys = points.map(p => p.y);
+    const xMin = Math.min(...xs), xMax = Math.max(...xs);
+    const yMin = minY ?? Math.min(...ys);
+    const yMax = maxY ?? Math.max(...ys);
+    const dx = (xMax - xMin) || 1;
+    const dy = (yMax - yMin) || 1;
+
+    const mapX = (x) => pad + (W - pad*2) * ((x - xMin)/dx);
+    const mapY = (y) => H - pad - (H - pad*2) * ((y - yMin)/dy);
+
+    const d = points.map((p,i)=> `${i===0?'M':'L'} ${mapX(p.x).toFixed(2)} ${mapY(p.y).toFixed(2)}`).join(' ');
+
+    const gridLines = 4;
+    let grid = '';
+    for (let i=0;i<=gridLines;i++){
+      const yy = pad + (H - pad*2) * (i/gridLines);
+      grid += `<line x1="${pad}" y1="${yy}" x2="${W-pad}" y2="${yy}" stroke="rgba(255,255,255,.06)" />`;
+    }
+
+    const svg = `
+      <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" aria-label="chart">
+        <defs>
+          <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="rgba(120,166,255,.55)" />
+            <stop offset="100%" stop-color="rgba(120,166,255,0)" />
+          </linearGradient>
+        </defs>
+        ${grid}
+        <path d="${d}" fill="none" stroke="rgba(120,166,255,.90)" stroke-width="4" stroke-linecap="round" />
+        <path d="${d} L ${mapX(points[points.length-1].x)} ${H-pad} L ${mapX(points[0].x)} ${H-pad} Z" fill="url(#g)" />
+        <text x="${pad}" y="${pad-8}" fill="rgba(174,183,230,.85)" font-size="18" font-family="${getComputedStyle(document.documentElement).getPropertyValue('--mono')}">${escapeHtml(labelA)}</text>
+        <text x="${W-pad}" y="${pad-8}" text-anchor="end" fill="rgba(174,183,230,.85)" font-size="18" font-family="${getComputedStyle(document.documentElement).getPropertyValue('--mono')}">${escapeHtml(labelB)}</text>
+      </svg>
+    `;
+    container.innerHTML = svg;
+  }
+
+  function renderBarCompare(container, items){
+    container.innerHTML = '';
+    const W=900,H=320,pad=26;
+    const max = Math.max(...items.map(i=>i.value), 1);
+    const barW = (W - pad*2) / items.length;
+    const bars = items.map((it, idx) => {
+      const x = pad + idx*barW + barW*0.14;
+      const w = barW*0.72;
+      const h = (H - pad*2) * (it.value/max);
+      const y = H - pad - h;
+      return `
+        <rect x="${x}" y="${y}" width="${w}" height="${h}" rx="12" fill="${it.color}" opacity="0.92" />
+        <text x="${x + w/2}" y="${H - 10}" text-anchor="middle" fill="rgba(174,183,230,.85)" font-size="16" font-family="${getComputedStyle(document.documentElement).getPropertyValue('--mono')}">${escapeHtml(it.label)}</text>
+      `;
+    }).join('');
+
+    container.innerHTML = `
+      <svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none">
+        <line x1="${pad}" y1="${H-pad}" x2="${W-pad}" y2="${H-pad}" stroke="rgba(255,255,255,.10)" />
+        ${bars}
+      </svg>
+    `;
+  }
+
+  function escapeHtml(s){
+    return String(s)
+      .replaceAll('&','&amp;')
+      .replaceAll('<','&lt;')
+      .replaceAll('>','&gt;')
+      .replaceAll('"','&quot;')
+      .replaceAll("'",'&#039;');
+  }
+
+  // ------------------------
+  // Nav
+  // ------------------------
+  const navButtons = Array.from(document.querySelectorAll('.navbtn'));
+
+  function setTab(tab){
+    navButtons.forEach(b => b.setAttribute('aria-selected', String(b.dataset.tab === tab)));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    const el = document.querySelector('#tab-' + tab);
+    if (el) el.classList.add('active');
+  }
+
+  navButtons.forEach(b => b.addEventListener('click', () => setTab(b.dataset.tab)));
+
+  // ------------------------
+  // Currency
+  // ------------------------
+  let currentCurrency = 'USD';
+
+  function refreshCurrencyUI(){
+    $('chipCurrency').textContent = currentCurrency;
+    const sym = currencySymbols[currentCurrency] ?? '$';
+
+    const map = [
+      ['fire_assets_hint', sym],
+      ['fire_income_hint', sym + '/mo'],
+      ['fire_expenses_hint', sym + '/mo'],
+      ['ret_spend_hint', sym + '/mo'],
+      ['pass_income_hint', sym + '/mo'],
+      ['cmp_p_hint', sym],
+      ['cmp_c_hint', sym + '/mo']
+    ];
+
+    map.forEach(([id, txt]) => { const el = $(id); if (el) el.textContent = txt; });
+  }
+
+  $('currency').addEventListener('change', (e) => {
+    currentCurrency = e.target.value;
+    refreshCurrencyUI();
+    // re-calc current tabs if already computed
+    calcRetirement();
+    calcFIRE();
+    calcPassive();
+    calcCompound();
+  });
+
+  refreshCurrencyUI();
+
+  // ------------------------
+  // Calculators
+  // ------------------------
+
+  // FIRE: find years to reach target = annualExpenses / (SWR)
+  function calcFIRE(){
+    const age = +$('fire_age').value;
+    const assets0 = +$('fire_assets').value;
+    const incomeM = +$('fire_income').value;
+    const expensesM = +$('fire_expenses').value;
+    const r = (+$('fire_return').value)/100;
+    const swr = (+$('fire_swr').value)/100;
+
+    const warnings = [];
+    if (incomeM < expensesM) warnings.push('Income is below expenses → savings are negative. FIRE is not reachable under these inputs.');
+    if (r < 0) warnings.push('Negative real return makes the timeline unstable; try 0–6% real.');
+    if (swr <= 0 || swr > 0.08) warnings.push('SWR outside typical range (3–5%).');
+
+    const annualExpenses = expensesM * 12;
+    const target = swr > 0 ? annualExpenses / swr : Infinity;
+    const contribAnnual = Math.max(0, (incomeM - expensesM) * 12);
+
+    // simulate yearly compounding
+    let assets = assets0;
+    const horizonYears = 60;
+    let yearsTo = null;
+    const points = [];
+
+    for (let y=0; y<=horizonYears; y++){
+      const curAge = age + y;
+      points.push({x: curAge, y: assets});
+      if (yearsTo === null && assets >= target) yearsTo = y;
+      assets = assets * (1 + r) + contribAnnual;
+    }
+
+    const fireAge = yearsTo === null ? null : age + yearsTo;
+
+    kpi($('fire_kpi'), [
+      {t:'Target portfolio', v: fmtMoney(target, currentCurrency)},
+      {t:'Annual savings', v: fmtMoney(contribAnnual, currentCurrency)},
+      {t:'Years to FI', v: yearsTo === null ? '—' : fmtNum(yearsTo)},
+      {t:'FI age', v: fireAge === null ? '—' : fmtNum(fireAge)}
+    ]);
+
+    toast($('fire_toast'), warnText(warnings));
+
+    // chart: show portfolio and target line as maxY
+    const maxY = Math.max(target, ...points.map(p=>p.y));
+    renderLineChart($('fire_chart'), points, {minY:0, maxY:maxY*1.05, labelA:'Assets', labelB:'Target'});
+
+    // draw target line overlay using CSS pseudo? simplest: add a thin div as overlay with absolute positioning isn't trivial with svg;
+    // we'll add it via second path inside chart by re-rendering with a target line.
+    addHorizontalTargetLine($('fire_chart'), target, 0, maxY*1.05);
+  }
+
+  function addHorizontalTargetLine(chartContainer, target, minY, maxY){
+    const svg = chartContainer.querySelector('svg');
+    if (!svg) return;
+    const W = 900, H = 320, pad = 26;
+    const dy = (maxY - minY) || 1;
+    const y = H - pad - (H - pad*2) * ((target - minY)/dy);
+    const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    line.setAttribute('x1', String(pad));
+    line.setAttribute('x2', String(W-pad));
+    line.setAttribute('y1', String(y));
+    line.setAttribute('y2', String(y));
+    line.setAttribute('stroke', 'rgba(255,204,102,.75)');
+    line.setAttribute('stroke-width', '3');
+    line.setAttribute('stroke-dasharray', '10 8');
+    svg.appendChild(line);
+  }
+
+  // Retirement target
+  function calcRetirement(){
+    const spendM = +$('ret_spend').value;
+    const swr = (+$('ret_swr').value)/100;
+    const buffer = (+$('ret_buffer').value)/100;
+
+    const warnings = [];
+    if (swr <= 0) warnings.push('SWR must be > 0.');
+    if (swr < 0.025) warnings.push('Very low SWR. Target will be huge (conservative).');
+    if (swr > 0.06) warnings.push('High SWR increases risk. Consider 3–4% as baseline.');
+
+    const annual = spendM * 12;
+    const target = swr > 0 ? annual / swr : Infinity;
+    const buffered = target * (1 + clamp(buffer, 0, 1));
+
+    kpi($('ret_kpi'), [
+      {t:'Monthly spending', v: fmtMoney(spendM, currentCurrency) + '/mo'},
+      {t:'Yearly spending', v: fmtMoney(annual, currentCurrency) + '/yr'},
+      {t:'Target (base)', v: fmtMoney(target, currentCurrency)},
+      {t:'Target (buffered)', v: fmtMoney(buffered, currentCurrency)}
+    ]);
+
+    toast($('ret_toast'), warnText(warnings));
+
+    renderBarCompare($('ret_chart'), [
+      {label:'Base', value: target, color:'rgba(120,166,255,.75)'},
+      {label:'Buffered', value: buffered, color:'rgba(69,212,131,.75)'}
+    ]);
+  }
+
+  // Passive income
+  function calcPassive(){
+    const incomeM = +$('pass_income').value;
+    const method = $('pass_method').value;
+    const swr = (+$('pass_swr').value)/100;
+    const yld = (+$('pass_yield').value)/100;
+    const tax = (+$('pass_tax').value)/100;
+    const profile = $('pass_profile').value;
+
+    const warnings = [];
+    if (incomeM <= 0) warnings.push('Target income should be > 0.');
+    if (tax < 0 || tax > 0.6) warnings.push('Tax drag seems unusual.');
+    if (swr <= 0 || swr > 0.08) warnings.push('SWR outside typical range (3–5%).');
+    if (yld <= 0 || yld > 0.2) warnings.push('Yield seems unusual.');
+
+    const annualNet = incomeM * 12;
+    const annualGrossNeeded = (1 - tax) > 0 ? annualNet / (1 - tax) : Infinity;
+
+    const requiredSWR = swr > 0 ? annualGrossNeeded / swr : Infinity;
+    const requiredYield = yld > 0 ? annualGrossNeeded / yld : Infinity;
+
+    let required = method === 'yield' ? requiredYield : requiredSWR;
+    if (profile === 'conservative') required *= 1.10;
+
+    kpi($('pass_kpi'), [
+      {t:'Target passive income', v: fmtMoney(incomeM, currentCurrency) + '/mo'},
+      {t:'Annual income needed (gross)', v: fmtMoney(annualGrossNeeded, currentCurrency) + '/yr'},
+      {t:'Required portfolio (chosen)', v: fmtMoney(required, currentCurrency)},
+      {t:'Method', v: method === 'yield' ? 'Yield' : 'SWR'}
+    ]);
+
+    toast($('pass_toast'), warnText(warnings));
+
+    renderBarCompare($('pass_chart'), [
+      {label:'SWR', value: requiredSWR, color:'rgba(120,166,255,.75)'},
+      {label:'Yield', value: requiredYield, color:'rgba(255,204,102,.75)'},
+      {label:'Chosen', value: required, color:'rgba(69,212,131,.75)'}
+    ]);
+  }
+
+  // Compound interest with monthly contributions; supports different compounding freq.
+  function compoundFV({P, C, rAnnual, years, freq, inflationAnnual=0}){
+    // Convert annual nominal to per-period rate
+    const n = Math.max(1, Math.floor(freq));
+    const r = rAnnual;
+    const rp = Math.pow(1 + r, 1/n) - 1; // per period
+
+    const totalPeriods = Math.round(years * n);
+    let balance = P;
+    const points = [];
+
+    // Assume contributions are monthly; convert to per-period contribution
+    // If compounding not monthly, approximate by spreading C across periods.
+    const contribPerPeriod = C * (12 / n);
+
+    for (let p=0; p<=totalPeriods; p++){
+      const tYears = p / n;
+      points.push({x: tYears, y: balance});
+      balance = balance * (1 + rp) + contribPerPeriod;
+    }
+
+    const nominalFV = balance;
+
+    // Real adjustment (rough): discount by inflation
+    let realFV = null;
+    if (inflationAnnual > 0){
+      realFV = nominalFV / Math.pow(1 + inflationAnnual, years);
+    }
+
+    return { nominalFV, realFV, points };
+  }
+
+  function calcCompound(){
+    const P = +$('cmp_p').value;
+    const C = +$('cmp_c').value;
+    const rAnnual = (+$('cmp_r').value)/100;
+    const years = +$('cmp_years').value;
+    const freq = +$('cmp_freq').value;
+    const infl = (+$('cmp_infl').value)/100;
+
+    const warnings=[];
+    if (years <= 0) warnings.push('Years must be > 0');
+    if (rAnnual < -0.5) warnings.push('Return is extremely negative.');
+    if (rAnnual > 0.3) warnings.push('Return is extremely high for long horizons.');
+    if (infl < 0) warnings.push('Negative inflation? ok, but unusual.');
+
+    const {nominalFV, realFV, points} = compoundFV({P, C, rAnnual, years, freq, inflationAnnual: infl});
+
+    const totalContrib = C * 12 * years;
+    const gain = nominalFV - (P + totalContrib);
+
+    kpi($('cmp_kpi'), [
+      {t:'Final value (nominal)', v: fmtMoney(nominalFV, currentCurrency)},
+      {t:'Total contributions', v: fmtMoney(totalContrib, currentCurrency)},
+      {t:'Gain (nominal)', v: fmtMoney(gain, currentCurrency)},
+      {t:'Final value (real)', v: infl>0 ? fmtMoney(realFV, currentCurrency) : '—'}
+    ]);
+
+    toast($('cmp_toast'), warnText(warnings));
+
+    // Build chart points by years
+    const pts = points
+      .filter((p, idx) => idx % Math.max(1, Math.floor((years*freq)/60)) === 0 || idx === points.length-1)
+      .map(p => ({x: p.x, y: p.y}));
+
+    renderLineChart($('cmp_chart'), pts, {minY:0, maxY: Math.max(...pts.map(p=>p.y))*1.05, labelA:'Balance', labelB:`${years}y`});
+  }
+
+  // ------------------------
+  // Wire buttons + defaults
+  // ------------------------
+  $('fire_calc').addEventListener('click', calcFIRE);
+  $('ret_calc').addEventListener('click', calcRetirement);
+  $('pass_calc').addEventListener('click', calcPassive);
+  $('cmp_calc').addEventListener('click', calcCompound);
+
+  document.querySelectorAll('[data-reset]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const k = btn.getAttribute('data-reset');
+      const presets = {
+        fire: {fire_age:30, fire_assets:25000, fire_income:4500, fire_expenses:2500, fire_return:5.0, fire_swr:4.0},
+        retirement: {ret_spend:3000, ret_swr:4.0, ret_buffer:15, currency:'USD'},
+        passive: {pass_income:2000, pass_method:'swr', pass_swr:4.0, pass_yield:3.0, pass_tax:0, pass_profile:'simple'},
+        compound: {cmp_p:10000, cmp_c:500, cmp_r:7.0, cmp_years:20, cmp_freq:12, cmp_infl:0.0}
+      };
+      const p = presets[k];
+      if (!p) return;
+      Object.entries(p).forEach(([id,val]) => { if ($(id)) $(id).value = val; });
+      if (k === 'retirement') { currentCurrency = $('currency').value; refreshCurrencyUI(); }
+      // re-run
+      if (k === 'fire') calcFIRE();
+      if (k === 'retirement') calcRetirement();
+      if (k === 'passive') calcPassive();
+      if (k === 'compound') calcCompound();
+    });
+  });
+
+  // passive method toggles
+  $('pass_method').addEventListener('change', () => {
+    const method = $('pass_method').value;
+    $('pass_swr').disabled = method === 'yield';
+    $('pass_yield').disabled = method === 'swr';
+    calcPassive();
+  });
+
+  // Initial calculations
+  calcFIRE();
+  calcRetirement();
+  calcPassive();
+  calcCompound();
+</script>
+</body>
+</html>
