@@ -1,0 +1,25 @@
+# OpenClaw workspace internals
+.openclaw/
+.clawhub/
+
+# macOS
+.DS_Store
+
+# Android/Gradle
+**/.gradle/
+**/build/
+**/.kotlin/
+
+# Local SDK path
+**/local.properties
+
+# Android Studio
+**/.idea/
+**/*.iml
+
+# Firebase config (should not be committed)
+**/google-services.json
+
+# Tooling artifacts
+**/gradle-*/
+**/gradle.zip
