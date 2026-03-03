@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Siguiente</string>
+  <string name="action_back">Atrás</string>
+  <string name="action_skip">Saltar</string>
+  <string name="action_continue">Continuar</string>
+  <string name="action_see_inside">Solo mirar</string>
+  <string name="action_start">Empezar</string>
+  <string name="action_calculate">Calcular</string>
+  <string name="action_reset">Restablecer</string>
+  <string name="action_explain">Explicar</string>
+  <string name="action_hide_explanation">Ocultar explicación</string>
+  <string name="unit_per_month">/mes</string>
+  <string name="unit_year_short">a</string>
+  <string name="unit_percent_per_year">%/año</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Bienvenido</string>
+  <string name="onboarding_subtitle">Responde unas preguntas para adaptar la app. O solo mira lo que hay.</string>
+  <string name="onboarding_goal_title">¿Cuál es tu objetivo principal?</string>
+  <string name="onboarding_goal_retire">Jubilarme con seguridad</string>
+  <string name="onboarding_goal_save">Ahorrar para una meta</string>
+  <string name="onboarding_goal_grow">Hacer crecer inversiones</string>
+  <string name="onboarding_horizon_title">¿Cuándo necesitas el dinero?</string>
+  <string name="onboarding_horizon_soon">0–2 años</string>
+  <string name="onboarding_horizon_mid">3–10 años</string>
+  <string name="onboarding_horizon_long">10+ años</string>
+  <string name="onboarding_risk_title">¿Cómo te sientes con el riesgo?</string>
+  <string name="onboarding_risk_low">Bajo (dormir tranquilo)</string>
+  <string name="onboarding_risk_med">Medio</string>
+  <string name="onboarding_risk_high">Alto (tolero altibajos)</string>
+
+  <string name="home_title">Calculadoras</string>
+  <string name="home_compound">Crecimiento compuesto</string>
+  <string name="home_savings">Meta de ahorro</string>
+  <string name="home_retirement">Jubilación</string>
+
+  <string name="explain_compound">El crecimiento compuesto significa ganar rendimientos sobre rendimientos. Con el tiempo, el crecimiento puede acelerarse.</string>
+  <string name="explain_swr">La tasa de retiro segura (SWR) es una regla práctica de cuánto puedes gastar cada año de una cartera.</string>
+  <string name="explain_savings">Una meta de ahorro es la cantidad que quieres para una fecha. Esto estima cuánto aportar cada mes.</string>
+  <string name="explain_retirement">Esto estima el tamaño de la cartera que podrías necesitar. Usa una tasa de retiro (SWR) como regla práctica.</string>
+
+  <string name="compound_title">Crecimiento compuesto</string>
+  <string name="compound_principal">Monto inicial</string>
+  <string name="compound_monthly">Aporte mensual</string>
+  <string name="compound_return">Rendimiento anual</string>
+  <string name="compound_years">Años</string>
+  <string name="compound_inflation">Inflación (opcional)</string>
+  <string name="compound_result_final">Valor final</string>
+  <string name="compound_result_contrib">Aportes totales</string>
+  <string name="compound_result_gain">Ganancia total</string>
+  <string name="compound_result_real">Valor final (con inflación)</string>
+
+  <string name="savings_title">Meta de ahorro</string>
+  <string name="savings_goal_amount">Cantidad objetivo</string>
+  <string name="savings_current">Ya ahorrado</string>
+  <string name="savings_years">Años hasta la meta</string>
+  <string name="savings_return">Rendimiento anual esperado</string>
+  <string name="savings_result_monthly">Mensual necesario</string>
+
+  <string name="retirement_title">Jubilación</string>
+  <string name="retirement_monthly_spend">Gasto mensual en jubilación</string>
+  <string name="retirement_swr">Tasa de retiro segura (SWR)</string>
+  <string name="retirement_buffer">Margen de seguridad</string>
+  <string name="retirement_result_target">Cartera objetivo</string>
+  <string name="retirement_result_target_buffered">Objetivo (con margen)</string>
+
+  <string name="ads_label">Anuncio</string>
+</resources>

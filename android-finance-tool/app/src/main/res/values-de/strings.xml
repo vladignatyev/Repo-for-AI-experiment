@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Weiter</string>
+  <string name="action_back">Zurück</string>
+  <string name="action_skip">Überspringen</string>
+  <string name="action_continue">Fortfahren</string>
+  <string name="action_see_inside">Nur umschauen</string>
+  <string name="action_start">Start</string>
+  <string name="action_calculate">Berechnen</string>
+  <string name="action_reset">Zurücksetzen</string>
+  <string name="action_explain">Erklären</string>
+  <string name="action_hide_explanation">Erklärung ausblenden</string>
+  <string name="unit_per_month">/Monat</string>
+  <string name="unit_year_short">J</string>
+  <string name="unit_percent_per_year">%/Jahr</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Willkommen</string>
+  <string name="onboarding_subtitle">Beantworte ein paar Fragen, damit wir die App anpassen können. Oder schau einfach rein.</string>
+  <string name="onboarding_goal_title">Was ist dein Hauptziel?</string>
+  <string name="onboarding_goal_retire">Sicher in Rente gehen</string>
+  <string name="onboarding_goal_save">Für ein Ziel sparen</string>
+  <string name="onboarding_goal_grow">Investments wachsen lassen</string>
+  <string name="onboarding_horizon_title">Wann brauchst du das Geld?</string>
+  <string name="onboarding_horizon_soon">0–2 Jahre</string>
+  <string name="onboarding_horizon_mid">3–10 Jahre</string>
+  <string name="onboarding_horizon_long">10+ Jahre</string>
+  <string name="onboarding_risk_title">Wie fühlst du dich bei Risiko?</string>
+  <string name="onboarding_risk_low">Niedrig (ruhig schlafen)</string>
+  <string name="onboarding_risk_med">Mittel</string>
+  <string name="onboarding_risk_high">Hoch (Schwankungen ok)</string>
+
+  <string name="home_title">Rechner</string>
+  <string name="home_compound">Zinseszins-Wachstum</string>
+  <string name="home_savings">Sparziel</string>
+  <string name="home_retirement">Rente</string>
+
+  <string name="explain_compound">Zinseszins bedeutet: Du verdienst Rendite auch auf frühere Renditen. Mit der Zeit kann das Wachstum schneller werden.</string>
+  <string name="explain_swr">Sichere Entnahmerate (SWR) ist eine Faustregel, wie viel du pro Jahr aus einem Portfolio ausgeben kannst.</string>
+  <string name="explain_savings">Ein Sparziel ist der Betrag, den du bis zu einem Datum haben möchtest. Das schätzt, wie viel du monatlich sparen musst.</string>
+  <string name="explain_retirement">Das schätzt, wie groß dein Portfolio sein sollte. Es nutzt eine Entnahmerate (SWR) als Faustregel.</string>
+
+  <string name="compound_title">Zinseszins-Wachstum</string>
+  <string name="compound_principal">Startbetrag</string>
+  <string name="compound_monthly">Monatlicher Beitrag</string>
+  <string name="compound_return">Jährliche Rendite</string>
+  <string name="compound_years">Jahre</string>
+  <string name="compound_inflation">Inflation (optional)</string>
+  <string name="compound_result_final">Endwert</string>
+  <string name="compound_result_contrib">Einzahlungen gesamt</string>
+  <string name="compound_result_gain">Gewinn gesamt</string>
+  <string name="compound_result_real">Endwert (nach Inflation)</string>
+
+  <string name="savings_title">Sparziel</string>
+  <string name="savings_goal_amount">Zielbetrag</string>
+  <string name="savings_current">Bereits gespart</string>
+  <string name="savings_years">Jahre bis zum Ziel</string>
+  <string name="savings_return">Erwartete jährliche Rendite</string>
+  <string name="savings_result_monthly">Monatlich nötig</string>
+
+  <string name="retirement_title">Rente</string>
+  <string name="retirement_monthly_spend">Monatliche Ausgaben in Rente</string>
+  <string name="retirement_swr">Sichere Entnahmerate (SWR)</string>
+  <string name="retirement_buffer">Sicherheits-Puffer</string>
+  <string name="retirement_result_target">Ziel-Portfolio</string>
+  <string name="retirement_result_target_buffered">Ziel (mit Puffer)</string>
+
+  <string name="ads_label">Anzeige</string>
+</resources>

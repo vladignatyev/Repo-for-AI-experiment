@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Lanjut</string>
+  <string name="action_back">Kembali</string>
+  <string name="action_skip">Lewati</string>
+  <string name="action_continue">Lanjutkan</string>
+  <string name="action_see_inside">Cuma lihat-lihat</string>
+  <string name="action_start">Mulai</string>
+  <string name="action_calculate">Hitung</string>
+  <string name="action_reset">Reset</string>
+  <string name="action_explain">Jelaskan</string>
+  <string name="action_hide_explanation">Sembunyikan penjelasan</string>
+  <string name="unit_per_month">/bln</string>
+  <string name="unit_year_short">th</string>
+  <string name="unit_percent_per_year">%/th</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Selamat datang</string>
+  <string name="onboarding_subtitle">Jawab beberapa pertanyaan agar aplikasi bisa menyesuaikan. Atau cukup lihat dulu.</string>
+  <string name="onboarding_goal_title">Apa tujuan utamamu?</string>
+  <string name="onboarding_goal_retire">Pensiun dengan tenang</string>
+  <string name="onboarding_goal_save">Menabung untuk tujuan</string>
+  <string name="onboarding_goal_grow">Mengembangkan investasi</string>
+  <string name="onboarding_horizon_title">Kapan butuh uangnya?</string>
+  <string name="onboarding_horizon_soon">0–2 tahun</string>
+  <string name="onboarding_horizon_mid">3–10 tahun</string>
+  <string name="onboarding_horizon_long">10+ tahun</string>
+  <string name="onboarding_risk_title">Bagaimana perasaanmu soal risiko?</string>
+  <string name="onboarding_risk_low">Rendah (tidur nyenyak)</string>
+  <string name="onboarding_risk_med">Sedang</string>
+  <string name="onboarding_risk_high">Tinggi (naik-turun oke)</string>
+
+  <string name="home_title">Kalkulator</string>
+  <string name="home_compound">Pertumbuhan majemuk</string>
+  <string name="home_savings">Target tabungan</string>
+  <string name="home_retirement">Pensiun</string>
+
+  <string name="explain_compound">Pertumbuhan majemuk berarti kamu dapat hasil juga dari hasil sebelumnya. Seiring waktu, pertumbuhan bisa makin cepat.</string>
+  <string name="explain_swr">SWR adalah patokan sederhana berapa banyak yang bisa kamu belanjakan per tahun dari portofolio.</string>
+  <string name="explain_savings">Target tabungan adalah jumlah yang ingin kamu punya pada tanggal tertentu. Ini memperkirakan berapa yang perlu ditabung tiap bulan.</string>
+  <string name="explain_retirement">Ini memperkirakan total portofolio yang mungkin kamu butuhkan. Menggunakan SWR sebagai patokan sederhana.</string>
+
+  <string name="compound_title">Pertumbuhan majemuk</string>
+  <string name="compound_principal">Jumlah awal</string>
+  <string name="compound_monthly">Kontribusi bulanan</string>
+  <string name="compound_return">Imbal hasil tahunan</string>
+  <string name="compound_years">Tahun</string>
+  <string name="compound_inflation">Inflasi (opsional)</string>
+  <string name="compound_result_final">Nilai akhir</string>
+  <string name="compound_result_contrib">Total kontribusi</string>
+  <string name="compound_result_gain">Total kenaikan</string>
+  <string name="compound_result_real">Nilai akhir (setelah inflasi)</string>
+
+  <string name="savings_title">Target tabungan</string>
+  <string name="savings_goal_amount">Jumlah target</string>
+  <string name="savings_current">Sudah ditabung</string>
+  <string name="savings_years">Tahun ke target</string>
+  <string name="savings_return">Perkiraan imbal hasil tahunan</string>
+  <string name="savings_result_monthly">Perlu per bulan</string>
+
+  <string name="retirement_title">Pensiun</string>
+  <string name="retirement_monthly_spend">Pengeluaran bulanan saat pensiun</string>
+  <string name="retirement_swr">SWR</string>
+  <string name="retirement_buffer">Buffer keamanan</string>
+  <string name="retirement_result_target">Portofolio target</string>
+  <string name="retirement_result_target_buffered">Target (dengan buffer)</string>
+
+  <string name="ads_label">Iklan</string>
+</resources>

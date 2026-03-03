@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Tovább</string>
+  <string name="action_back">Vissza</string>
+  <string name="action_skip">Kihagyás</string>
+  <string name="action_continue">Folytatás</string>
+  <string name="action_see_inside">Csak körülnézek</string>
+  <string name="action_start">Indítás</string>
+  <string name="action_calculate">Számítás</string>
+  <string name="action_reset">Visszaállítás</string>
+  <string name="action_explain">Magyarázat</string>
+  <string name="action_hide_explanation">Magyarázat elrejtése</string>
+  <string name="unit_per_month">/hó</string>
+  <string name="unit_year_short">év</string>
+  <string name="unit_percent_per_year">%/év</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Üdvözlünk</string>
+  <string name="onboarding_subtitle">Válaszolj pár kérdésre, hogy személyre szabjuk az appot. Vagy csak nézz körül.</string>
+  <string name="onboarding_goal_title">Mi a fő célod?</string>
+  <string name="onboarding_goal_retire">Nyugodt nyugdíj</string>
+  <string name="onboarding_goal_save">Takarékoskodás egy célra</string>
+  <string name="onboarding_goal_grow">Befektetések növelése</string>
+  <string name="onboarding_horizon_title">Mikor kell a pénz?</string>
+  <string name="onboarding_horizon_soon">0–2 év</string>
+  <string name="onboarding_horizon_mid">3–10 év</string>
+  <string name="onboarding_horizon_long">10+ év</string>
+  <string name="onboarding_risk_title">Hogy állsz a kockázathoz?</string>
+  <string name="onboarding_risk_low">Alacsony (nyugodt alvás)</string>
+  <string name="onboarding_risk_med">Közepes</string>
+  <string name="onboarding_risk_high">Magas (belefér a hullámzás)</string>
+
+  <string name="home_title">Kalkulátorok</string>
+  <string name="home_compound">Kamatos növekedés</string>
+  <string name="home_savings">Megtakarítási cél</string>
+  <string name="home_retirement">Nyugdíj</string>
+
+  <string name="explain_compound">A kamatos növekedés azt jelenti, hogy a hozam a korábbi hozamokra is „rádolgozik”. Idővel gyorsulhat.</string>
+  <string name="explain_swr">A biztonságos kivételi ráta (SWR) egy ökölszabály, mennyit költhetsz évente a portfólióból.</string>
+  <string name="explain_savings">A megtakarítási cél az összeg, amit egy dátumra szeretnél. Ez megbecsüli a havi szükséges összeget.</string>
+  <string name="explain_retirement">Ez megbecsüli, mekkora portfólióra lehet szükséged. Egy kivételi rátát (SWR) használ ökölszabályként.</string>
+
+  <string name="compound_title">Kamatos növekedés</string>
+  <string name="compound_principal">Kezdő összeg</string>
+  <string name="compound_monthly">Havi befizetés</string>
+  <string name="compound_return">Éves hozam</string>
+  <string name="compound_years">Évek</string>
+  <string name="compound_inflation">Infláció (opcionális)</string>
+  <string name="compound_result_final">Végső érték</string>
+  <string name="compound_result_contrib">Összes befizetés</string>
+  <string name="compound_result_gain">Összes nyereség</string>
+  <string name="compound_result_real">Végső érték (infláció után)</string>
+
+  <string name="savings_title">Megtakarítási cél</string>
+  <string name="savings_goal_amount">Célösszeg</string>
+  <string name="savings_current">Már félretett</string>
+  <string name="savings_years">Évek a célig</string>
+  <string name="savings_return">Várt éves hozam</string>
+  <string name="savings_result_monthly">Szükséges havonta</string>
+
+  <string name="retirement_title">Nyugdíj</string>
+  <string name="retirement_monthly_spend">Havi kiadás nyugdíjban</string>
+  <string name="retirement_swr">Biztonságos kivételi ráta (SWR)</string>
+  <string name="retirement_buffer">Biztonsági tartalék</string>
+  <string name="retirement_result_target">Cél portfólió</string>
+  <string name="retirement_result_target_buffered">Cél (tartalékkal)</string>
+
+  <string name="ads_label">Hirdetés</string>
+</resources>

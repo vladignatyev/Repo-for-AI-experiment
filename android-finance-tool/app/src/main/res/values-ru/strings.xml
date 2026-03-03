@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Далее</string>
+  <string name="action_back">Назад</string>
+  <string name="action_skip">Пропустить</string>
+  <string name="action_continue">Продолжить</string>
+  <string name="action_see_inside">Просто посмотреть</string>
+  <string name="action_start">Старт</string>
+  <string name="action_calculate">Рассчитать</string>
+  <string name="action_reset">Сбросить</string>
+  <string name="action_explain">Объяснить</string>
+  <string name="action_hide_explanation">Скрыть объяснение</string>
+  <string name="unit_per_month">/мес</string>
+  <string name="unit_year_short">г</string>
+  <string name="unit_percent_per_year">%/год</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Добро пожаловать</string>
+  <string name="onboarding_subtitle">Ответь на пару вопросов — мы подстроим приложение. Или просто загляни внутрь.</string>
+  <string name="onboarding_goal_title">Какая главная цель?</string>
+  <string name="onboarding_goal_retire">Уверенно выйти на пенсию</string>
+  <string name="onboarding_goal_save">Накопить на цель</string>
+  <string name="onboarding_goal_grow">Приумножать инвестиции</string>
+  <string name="onboarding_horizon_title">Когда нужны деньги?</string>
+  <string name="onboarding_horizon_soon">0–2 года</string>
+  <string name="onboarding_horizon_mid">3–10 лет</string>
+  <string name="onboarding_horizon_long">10+ лет</string>
+  <string name="onboarding_risk_title">Как ты относишься к риску?</string>
+  <string name="onboarding_risk_low">Низкий (спать спокойно)</string>
+  <string name="onboarding_risk_med">Средний</string>
+  <string name="onboarding_risk_high">Высокий (волатильность ок)</string>
+
+  <string name="home_title">Калькуляторы</string>
+  <string name="home_compound">Сложный процент</string>
+  <string name="home_savings">Цель накоплений</string>
+  <string name="home_retirement">Пенсия</string>
+
+  <string name="explain_compound">Сложный процент — это когда доход начисляется и на прошлый доход. Со временем рост может ускоряться.</string>
+  <string name="explain_swr">Безопасная норма изъятий (SWR) — это примерная «правило-пальцем-в-небо», сколько можно тратить в год из портфеля.</string>
+  <string name="explain_savings">Цель накоплений — сумма к определённой дате. Калькулятор оценивает, сколько откладывать каждый месяц.</string>
+  <string name="explain_retirement">Оценивает, какой капитал может понадобиться. Использует норму изъятий (SWR) как простое приближение.</string>
+
+  <string name="compound_title">Сложный процент</string>
+  <string name="compound_principal">Стартовая сумма</string>
+  <string name="compound_monthly">Ежемесячный взнос</string>
+  <string name="compound_return">Доходность в год</string>
+  <string name="compound_years">Годы</string>
+  <string name="compound_inflation">Инфляция (опц.)</string>
+  <string name="compound_result_final">Итоговая сумма</string>
+  <string name="compound_result_contrib">Взносы всего</string>
+  <string name="compound_result_gain">Прирост всего</string>
+  <string name="compound_result_real">Итог (с учётом инфляции)</string>
+
+  <string name="savings_title">Цель накоплений</string>
+  <string name="savings_goal_amount">Сумма цели</string>
+  <string name="savings_current">Уже накоплено</string>
+  <string name="savings_years">Лет до цели</string>
+  <string name="savings_return">Ожид. доходность в год</string>
+  <string name="savings_result_monthly">Нужно в месяц</string>
+
+  <string name="retirement_title">Пенсия</string>
+  <string name="retirement_monthly_spend">Расходы в месяц на пенсии</string>
+  <string name="retirement_swr">Норма изъятий (SWR)</string>
+  <string name="retirement_buffer">Запас</string>
+  <string name="retirement_result_target">Целевой капитал</string>
+  <string name="retirement_result_target_buffered">Цель (с запасом)</string>
+
+  <string name="ads_label">Реклама</string>
+</resources>

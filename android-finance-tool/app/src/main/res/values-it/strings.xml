@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Avanti</string>
+  <string name="action_back">Indietro</string>
+  <string name="action_skip">Salta</string>
+  <string name="action_continue">Continua</string>
+  <string name="action_see_inside">Solo dare un’occhiata</string>
+  <string name="action_start">Inizia</string>
+  <string name="action_calculate">Calcola</string>
+  <string name="action_reset">Reimposta</string>
+  <string name="action_explain">Spiega</string>
+  <string name="action_hide_explanation">Nascondi spiegazione</string>
+  <string name="unit_per_month">/mese</string>
+  <string name="unit_year_short">a</string>
+  <string name="unit_percent_per_year">%/anno</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Benvenuto</string>
+  <string name="onboarding_subtitle">Rispondi a poche domande per personalizzare l’app. Oppure guarda cosa c’è dentro.</string>
+  <string name="onboarding_goal_title">Qual è il tuo obiettivo principale?</string>
+  <string name="onboarding_goal_retire">Andare in pensione con serenità</string>
+  <string name="onboarding_goal_save">Risparmiare per un obiettivo</string>
+  <string name="onboarding_goal_grow">Far crescere gli investimenti</string>
+  <string name="onboarding_horizon_title">Quando ti serviranno i soldi?</string>
+  <string name="onboarding_horizon_soon">0–2 anni</string>
+  <string name="onboarding_horizon_mid">3–10 anni</string>
+  <string name="onboarding_horizon_long">10+ anni</string>
+  <string name="onboarding_risk_title">Come vivi il rischio?</string>
+  <string name="onboarding_risk_low">Basso (dormire tranquillo)</string>
+  <string name="onboarding_risk_med">Medio</string>
+  <string name="onboarding_risk_high">Alto (ok con alti e bassi)</string>
+
+  <string name="home_title">Calcolatori</string>
+  <string name="home_compound">Crescita composta</string>
+  <string name="home_savings">Obiettivo di risparmio</string>
+  <string name="home_retirement">Pensione</string>
+
+  <string name="explain_compound">La crescita composta significa guadagnare rendimenti anche sui rendimenti passati. Col tempo può accelerare.</string>
+  <string name="explain_swr">Il tasso di prelievo sicuro (SWR) è una regola pratica su quanto puoi spendere ogni anno da un portafoglio.</string>
+  <string name="explain_savings">Un obiettivo di risparmio è l’importo che vuoi entro una data. Questo stima quanto mettere da parte ogni mese.</string>
+  <string name="explain_retirement">Stima quanto potrebbe servirti come portafoglio totale. Usa un tasso di prelievo (SWR) come regola pratica.</string>
+
+  <string name="compound_title">Crescita composta</string>
+  <string name="compound_principal">Importo iniziale</string>
+  <string name="compound_monthly">Versamento mensile</string>
+  <string name="compound_return">Rendimento annuo</string>
+  <string name="compound_years">Anni</string>
+  <string name="compound_inflation">Inflazione (opzionale)</string>
+  <string name="compound_result_final">Valore finale</string>
+  <string name="compound_result_contrib">Contributi totali</string>
+  <string name="compound_result_gain">Guadagno totale</string>
+  <string name="compound_result_real">Valore finale (dopo inflazione)</string>
+
+  <string name="savings_title">Obiettivo di risparmio</string>
+  <string name="savings_goal_amount">Importo obiettivo</string>
+  <string name="savings_current">Già risparmiato</string>
+  <string name="savings_years">Anni fino all’obiettivo</string>
+  <string name="savings_return">Rendimento annuo atteso</string>
+  <string name="savings_result_monthly">Mensile necessario</string>
+
+  <string name="retirement_title">Pensione</string>
+  <string name="retirement_monthly_spend">Spesa mensile in pensione</string>
+  <string name="retirement_swr">Tasso di prelievo sicuro (SWR)</string>
+  <string name="retirement_buffer">Margine di sicurezza</string>
+  <string name="retirement_result_target">Portafoglio obiettivo</string>
+  <string name="retirement_result_target_buffered">Obiettivo (con margine)</string>
+
+  <string name="ads_label">Annuncio</string>
+</resources>

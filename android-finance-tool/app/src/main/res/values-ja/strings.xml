@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">次へ</string>
+  <string name="action_back">戻る</string>
+  <string name="action_skip">スキップ</string>
+  <string name="action_continue">続ける</string>
+  <string name="action_see_inside">中身を見るだけ</string>
+  <string name="action_start">開始</string>
+  <string name="action_calculate">計算</string>
+  <string name="action_reset">リセット</string>
+  <string name="action_explain">説明する</string>
+  <string name="action_hide_explanation">説明を隠す</string>
+  <string name="unit_per_month">/月</string>
+  <string name="unit_year_short">年</string>
+  <string name="unit_percent_per_year">%/年</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">ようこそ</string>
+  <string name="onboarding_subtitle">いくつか質問に答えると、アプリをあなた向けに調整できます。見るだけでもOKです。</string>
+  <string name="onboarding_goal_title">主な目的は？</string>
+  <string name="onboarding_goal_retire">安心してリタイアしたい</string>
+  <string name="onboarding_goal_save">目標のために貯めたい</string>
+  <string name="onboarding_goal_grow">投資を増やしたい</string>
+  <string name="onboarding_horizon_title">いつお金が必要ですか？</string>
+  <string name="onboarding_horizon_soon">0〜2年</string>
+  <string name="onboarding_horizon_mid">3〜10年</string>
+  <string name="onboarding_horizon_long">10年以上</string>
+  <string name="onboarding_risk_title">リスクはどれくらいOK？</string>
+  <string name="onboarding_risk_low">低い（安心重視）</string>
+  <string name="onboarding_risk_med">中くらい</string>
+  <string name="onboarding_risk_high">高い（値動きOK）</string>
+
+  <string name="home_title">計算ツール</string>
+  <string name="home_compound">複利の成長</string>
+  <string name="home_savings">貯蓄目標</string>
+  <string name="home_retirement">リタイア</string>
+
+  <string name="explain_compound">複利とは、利益に対しても利益がつくことです。時間がたつほど増え方が加速します。</string>
+  <string name="explain_swr">安全な取り崩し率（SWR）は、資産から毎年どれくらい使えるかの目安です。</string>
+  <string name="explain_savings">貯蓄目標は、ある日までに欲しい金額です。毎月いくら積み立てればよいかを推定します。</string>
+  <string name="explain_retirement">必要な資産総額の目安を計算します。取り崩し率（SWR）という簡単な目安を使います。</string>
+
+  <string name="compound_title">複利の成長</string>
+  <string name="compound_principal">最初の金額</string>
+  <string name="compound_monthly">毎月の積立</string>
+  <string name="compound_return">年利</string>
+  <string name="compound_years">年数</string>
+  <string name="compound_inflation">インフレ（任意）</string>
+  <string name="compound_result_final">最終金額</string>
+  <string name="compound_result_contrib">積立合計</string>
+  <string name="compound_result_gain">増加分合計</string>
+  <string name="compound_result_real">最終金額（インフレ後）</string>
+
+  <string name="savings_title">貯蓄目標</string>
+  <string name="savings_goal_amount">目標金額</string>
+  <string name="savings_current">すでに貯めた額</string>
+  <string name="savings_years">目標までの年数</string>
+  <string name="savings_return">想定年利</string>
+  <string name="savings_result_monthly">必要な毎月額</string>
+
+  <string name="retirement_title">リタイア</string>
+  <string name="retirement_monthly_spend">リタイア後の月の支出</string>
+  <string name="retirement_swr">安全な取り崩し率（SWR）</string>
+  <string name="retirement_buffer">安全余裕</string>
+  <string name="retirement_result_target">目標資産</string>
+  <string name="retirement_result_target_buffered">目標（余裕込み）</string>
+
+  <string name="ads_label">広告</string>
+</resources>

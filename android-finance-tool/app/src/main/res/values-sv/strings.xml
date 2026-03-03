@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Nästa</string>
+  <string name="action_back">Tillbaka</string>
+  <string name="action_skip">Hoppa över</string>
+  <string name="action_continue">Fortsätt</string>
+  <string name="action_see_inside">Bara titta runt</string>
+  <string name="action_start">Starta</string>
+  <string name="action_calculate">Beräkna</string>
+  <string name="action_reset">Återställ</string>
+  <string name="action_explain">Förklara</string>
+  <string name="action_hide_explanation">Dölj förklaring</string>
+  <string name="unit_per_month">/mån</string>
+  <string name="unit_year_short">år</string>
+  <string name="unit_percent_per_year">%/år</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Välkommen</string>
+  <string name="onboarding_subtitle">Svara på några frågor så kan vi anpassa appen. Eller bara kika.</string>
+  <string name="onboarding_goal_title">Vad är ditt huvudmål?</string>
+  <string name="onboarding_goal_retire">Pension med trygghet</string>
+  <string name="onboarding_goal_save">Spara till ett mål</string>
+  <string name="onboarding_goal_grow">Växa investeringar</string>
+  <string name="onboarding_horizon_title">När behöver du pengarna?</string>
+  <string name="onboarding_horizon_soon">0–2 år</string>
+  <string name="onboarding_horizon_mid">3–10 år</string>
+  <string name="onboarding_horizon_long">10+ år</string>
+  <string name="onboarding_risk_title">Hur känner du inför risk?</string>
+  <string name="onboarding_risk_low">Låg (sov gott)</string>
+  <string name="onboarding_risk_med">Mellan</string>
+  <string name="onboarding_risk_high">Hög (tål svängningar)</string>
+
+  <string name="home_title">Kalkylatorer</string>
+  <string name="home_compound">Ränta på ränta</string>
+  <string name="home_savings">Sparmål</string>
+  <string name="home_retirement">Pension</string>
+
+  <string name="explain_compound">Ränta på ränta betyder att du får avkastning även på tidigare avkastning. Med tiden kan tillväxten öka.</string>
+  <string name="explain_swr">Säker uttagsnivå (SWR) är en tumregel för hur mycket du kan spendera per år från en portfölj.</string>
+  <string name="explain_savings">Ett sparmål är beloppet du vill ha till ett datum. Detta uppskattar hur mycket du behöver spara per månad.</string>
+  <string name="explain_retirement">Detta uppskattar hur stor portfölj du kan behöva. Det använder en uttagsnivå (SWR) som tumregel.</string>
+
+  <string name="compound_title">Ränta på ränta</string>
+  <string name="compound_principal">Startbelopp</string>
+  <string name="compound_monthly">Månadsinsättning</string>
+  <string name="compound_return">Årlig avkastning</string>
+  <string name="compound_years">År</string>
+  <string name="compound_inflation">Inflation (valfritt)</string>
+  <string name="compound_result_final">Slutvärde</string>
+  <string name="compound_result_contrib">Insättningar totalt</string>
+  <string name="compound_result_gain">Vinst totalt</string>
+  <string name="compound_result_real">Slutvärde (efter inflation)</string>
+
+  <string name="savings_title">Sparmål</string>
+  <string name="savings_goal_amount">Målbelopp</string>
+  <string name="savings_current">Redan sparat</string>
+  <string name="savings_years">År till målet</string>
+  <string name="savings_return">Förväntad årlig avkastning</string>
+  <string name="savings_result_monthly">Behövs per månad</string>
+
+  <string name="retirement_title">Pension</string>
+  <string name="retirement_monthly_spend">Månadsutgifter i pension</string>
+  <string name="retirement_swr">Säker uttagsnivå (SWR)</string>
+  <string name="retirement_buffer">Säkerhetsmarginal</string>
+  <string name="retirement_result_target">Målportfölj</string>
+  <string name="retirement_result_target_buffered">Mål (med marginal)</string>
+
+  <string name="ads_label">Annons</string>
+</resources>

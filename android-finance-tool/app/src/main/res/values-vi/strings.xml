@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Tiếp</string>
+  <string name="action_back">Quay lại</string>
+  <string name="action_skip">Bỏ qua</string>
+  <string name="action_continue">Tiếp tục</string>
+  <string name="action_see_inside">Chỉ xem thử</string>
+  <string name="action_start">Bắt đầu</string>
+  <string name="action_calculate">Tính</string>
+  <string name="action_reset">Đặt lại</string>
+  <string name="action_explain">Giải thích</string>
+  <string name="action_hide_explanation">Ẩn giải thích</string>
+  <string name="unit_per_month">/tháng</string>
+  <string name="unit_year_short">năm</string>
+  <string name="unit_percent_per_year">%/năm</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Chào mừng</string>
+  <string name="onboarding_subtitle">Trả lời vài câu hỏi để chúng tôi cá nhân hoá ứng dụng. Hoặc chỉ xem thử bên trong.</string>
+  <string name="onboarding_goal_title">Mục tiêu chính của bạn là gì?</string>
+  <string name="onboarding_goal_retire">Nghỉ hưu tự tin</string>
+  <string name="onboarding_goal_save">Tiết kiệm cho mục tiêu</string>
+  <string name="onboarding_goal_grow">Tăng trưởng đầu tư</string>
+  <string name="onboarding_horizon_title">Khi nào bạn cần tiền?</string>
+  <string name="onboarding_horizon_soon">0–2 năm</string>
+  <string name="onboarding_horizon_mid">3–10 năm</string>
+  <string name="onboarding_horizon_long">10+ năm</string>
+  <string name="onboarding_risk_title">Bạn cảm thấy thế nào về rủi ro?</string>
+  <string name="onboarding_risk_low">Thấp (ngủ ngon)</string>
+  <string name="onboarding_risk_med">Trung bình</string>
+  <string name="onboarding_risk_high">Cao (chấp nhận biến động)</string>
+
+  <string name="home_title">Máy tính</string>
+  <string name="home_compound">Tăng trưởng kép</string>
+  <string name="home_savings">Mục tiêu tiết kiệm</string>
+  <string name="home_retirement">Nghỉ hưu</string>
+
+  <string name="explain_compound">Tăng trưởng kép nghĩa là bạn kiếm lợi nhuận cả trên lợi nhuận trước đó. Theo thời gian, tăng trưởng có thể nhanh hơn.</string>
+  <string name="explain_swr">SWR là quy tắc đơn giản để ước tính bạn có thể chi mỗi năm bao nhiêu từ danh mục.</string>
+  <string name="explain_savings">Mục tiêu tiết kiệm là số tiền bạn muốn có vào một thời điểm. Công cụ này ước tính bạn cần tiết kiệm bao nhiêu mỗi tháng.</string>
+  <string name="explain_retirement">Ước tính tổng tài sản bạn có thể cần. Dùng SWR như một quy tắc đơn giản.</string>
+
+  <string name="compound_title">Tăng trưởng kép</string>
+  <string name="compound_principal">Số tiền ban đầu</string>
+  <string name="compound_monthly">Đóng góp hàng tháng</string>
+  <string name="compound_return">Lợi suất năm</string>
+  <string name="compound_years">Số năm</string>
+  <string name="compound_inflation">Lạm phát (tuỳ chọn)</string>
+  <string name="compound_result_final">Giá trị cuối</string>
+  <string name="compound_result_contrib">Tổng đóng góp</string>
+  <string name="compound_result_gain">Tổng tăng thêm</string>
+  <string name="compound_result_real">Giá trị cuối (sau lạm phát)</string>
+
+  <string name="savings_title">Mục tiêu tiết kiệm</string>
+  <string name="savings_goal_amount">Số tiền mục tiêu</string>
+  <string name="savings_current">Đã có</string>
+  <string name="savings_years">Số năm đến mục tiêu</string>
+  <string name="savings_return">Lợi suất năm kỳ vọng</string>
+  <string name="savings_result_monthly">Cần mỗi tháng</string>
+
+  <string name="retirement_title">Nghỉ hưu</string>
+  <string name="retirement_monthly_spend">Chi tiêu hàng tháng khi nghỉ hưu</string>
+  <string name="retirement_swr">SWR</string>
+  <string name="retirement_buffer">Dự phòng an toàn</string>
+  <string name="retirement_result_target">Danh mục mục tiêu</string>
+  <string name="retirement_result_target_buffered">Mục tiêu (có dự phòng)</string>
+
+  <string name="ads_label">Quảng cáo</string>
+</resources>

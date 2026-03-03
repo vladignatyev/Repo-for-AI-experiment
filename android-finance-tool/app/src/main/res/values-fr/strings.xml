@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Suivant</string>
+  <string name="action_back">Retour</string>
+  <string name="action_skip">Passer</string>
+  <string name="action_continue">Continuer</string>
+  <string name="action_see_inside">Juste regarder</string>
+  <string name="action_start">Démarrer</string>
+  <string name="action_calculate">Calculer</string>
+  <string name="action_reset">Réinitialiser</string>
+  <string name="action_explain">Expliquer</string>
+  <string name="action_hide_explanation">Masquer l’explication</string>
+  <string name="unit_per_month">/mois</string>
+  <string name="unit_year_short">an</string>
+  <string name="unit_percent_per_year">%/an</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Bienvenue</string>
+  <string name="onboarding_subtitle">Répondez à quelques questions pour personnaliser l’app. Ou regardez simplement.</string>
+  <string name="onboarding_goal_title">Quel est votre objectif principal ?</string>
+  <string name="onboarding_goal_retire">Prendre sa retraite sereinement</string>
+  <string name="onboarding_goal_save">Épargner pour un objectif</string>
+  <string name="onboarding_goal_grow">Faire croître ses investissements</string>
+  <string name="onboarding_horizon_title">Quand aurez-vous besoin de l’argent ?</string>
+  <string name="onboarding_horizon_soon">0–2 ans</string>
+  <string name="onboarding_horizon_mid">3–10 ans</string>
+  <string name="onboarding_horizon_long">10+ ans</string>
+  <string name="onboarding_risk_title">Comment vivez-vous le risque ?</string>
+  <string name="onboarding_risk_low">Faible (dormir tranquille)</string>
+  <string name="onboarding_risk_med">Moyen</string>
+  <string name="onboarding_risk_high">Élevé (je supporte la volatilité)</string>
+
+  <string name="home_title">Calculatrices</string>
+  <string name="home_compound">Croissance composée</string>
+  <string name="home_savings">Objectif d’épargne</string>
+  <string name="home_retirement">Retraite</string>
+
+  <string name="explain_compound">La croissance composée signifie que vous gagnez des rendements sur vos rendements. Avec le temps, la croissance peut accélérer.</string>
+  <string name="explain_swr">Le taux de retrait sûr (SWR) est une règle pratique pour estimer combien vous pouvez dépenser chaque année à partir d’un portefeuille.</string>
+  <string name="explain_savings">Un objectif d’épargne est le montant que vous voulez à une date. Cela estime combien ajouter chaque mois.</string>
+  <string name="explain_retirement">Cela estime le portefeuille total dont vous pourriez avoir besoin. Il utilise un taux de retrait (SWR) comme règle pratique.</string>
+
+  <string name="compound_title">Croissance composée</string>
+  <string name="compound_principal">Montant initial</string>
+  <string name="compound_monthly">Versement mensuel</string>
+  <string name="compound_return">Rendement annuel</string>
+  <string name="compound_years">Années</string>
+  <string name="compound_inflation">Inflation (optionnel)</string>
+  <string name="compound_result_final">Valeur finale</string>
+  <string name="compound_result_contrib">Contributions totales</string>
+  <string name="compound_result_gain">Gain total</string>
+  <string name="compound_result_real">Valeur finale (après inflation)</string>
+
+  <string name="savings_title">Objectif d’épargne</string>
+  <string name="savings_goal_amount">Montant cible</string>
+  <string name="savings_current">Déjà épargné</string>
+  <string name="savings_years">Années jusqu’à l’objectif</string>
+  <string name="savings_return">Rendement annuel attendu</string>
+  <string name="savings_result_monthly">Mensuel nécessaire</string>
+
+  <string name="retirement_title">Retraite</string>
+  <string name="retirement_monthly_spend">Dépenses mensuelles à la retraite</string>
+  <string name="retirement_swr">Taux de retrait sûr (SWR)</string>
+  <string name="retirement_buffer">Marge de sécurité</string>
+  <string name="retirement_result_target">Portefeuille cible</string>
+  <string name="retirement_result_target_buffered">Cible (avec marge)</string>
+
+  <string name="ads_label">Publicité</string>
+</resources>

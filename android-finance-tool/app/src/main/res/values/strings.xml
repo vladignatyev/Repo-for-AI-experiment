@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+
+  <!-- Common -->
+  <string name="action_next">Next</string>
+  <string name="action_back">Back</string>
+  <string name="action_skip">Skip</string>
+  <string name="action_continue">Continue</string>
+  <string name="action_see_inside">Just look around</string>
+  <string name="action_start">Start</string>
+  <string name="action_calculate">Calculate</string>
+  <string name="action_reset">Reset</string>
+  <string name="action_explain">Explain this</string>
+  <string name="action_hide_explanation">Hide explanation</string>
+  <string name="unit_per_month">/mo</string>
+  <string name="unit_year_short">y</string>
+  <string name="unit_percent_per_year">%/yr</string>
+  <string name="currency_symbol">$</string>
+
+  <!-- Onboarding -->
+  <string name="onboarding_title">Welcome</string>
+  <string name="onboarding_subtitle">Answer a few questions so we can tailor the app. Or just look around.</string>
+  <string name="onboarding_goal_title">What is your main goal?</string>
+  <string name="onboarding_goal_retire">Retire with confidence</string>
+  <string name="onboarding_goal_save">Save for a goal</string>
+  <string name="onboarding_goal_grow">Grow investments</string>
+  <string name="onboarding_horizon_title">When do you need the money?</string>
+  <string name="onboarding_horizon_soon">0–2 years</string>
+  <string name="onboarding_horizon_mid">3–10 years</string>
+  <string name="onboarding_horizon_long">10+ years</string>
+  <string name="onboarding_risk_title">How do you feel about risk?</string>
+  <string name="onboarding_risk_low">Low (sleep well)</string>
+  <string name="onboarding_risk_med">Medium</string>
+  <string name="onboarding_risk_high">High (I can handle ups &amp; downs)</string>
+
+  <!-- Home -->
+  <string name="home_title">Calculators</string>
+  <string name="home_compound">Compound growth</string>
+  <string name="home_savings">Savings goal</string>
+  <string name="home_retirement">Retirement</string>
+
+  <!-- Explainers -->
+  <string name="explain_compound">Compound growth means you earn returns on your returns. Over time, growth can speed up.</string>
+  <string name="explain_swr">Safe withdrawal rate (SWR) is a rule-of-thumb for how much you can spend each year from a portfolio.</string>
+  <string name="explain_savings">A savings goal is the amount you want by a date. This estimates how much to add each month.</string>
+  <string name="explain_retirement">This estimates the total portfolio you might need. It uses a withdrawal rate (SWR) as a simple rule-of-thumb.</string>
+
+  <!-- Compound -->
+  <string name="compound_title">Compound growth</string>
+  <string name="compound_principal">Starting amount</string>
+  <string name="compound_monthly">Monthly contribution</string>
+  <string name="compound_return">Annual return</string>
+  <string name="compound_years">Years</string>
+  <string name="compound_inflation">Inflation (optional)</string>
+  <string name="compound_result_final">Final value</string>
+  <string name="compound_result_contrib">Total contributions</string>
+  <string name="compound_result_gain">Total gain</string>
+  <string name="compound_result_real">Final value (after inflation)</string>
+
+  <!-- Savings -->
+  <string name="savings_title">Savings goal</string>
+  <string name="savings_goal_amount">Goal amount</string>
+  <string name="savings_current">Already saved</string>
+  <string name="savings_years">Years to goal</string>
+  <string name="savings_return">Expected annual return</string>
+  <string name="savings_result_monthly">Monthly needed</string>
+
+  <!-- Retirement -->
+  <string name="retirement_title">Retirement</string>
+  <string name="retirement_monthly_spend">Monthly spending in retirement</string>
+  <string name="retirement_swr">Safe withdrawal rate (SWR)</string>
+  <string name="retirement_buffer">Safety buffer</string>
+  <string name="retirement_result_target">Target portfolio</string>
+  <string name="retirement_result_target_buffered">Target (with buffer)</string>
+
+  <!-- Ads -->
+  <string name="ads_label">Ad</string>
+</resources>

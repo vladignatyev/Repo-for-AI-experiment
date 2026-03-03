@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">다음</string>
+  <string name="action_back">뒤로</string>
+  <string name="action_skip">건너뛰기</string>
+  <string name="action_continue">계속</string>
+  <string name="action_see_inside">둘러보기</string>
+  <string name="action_start">시작</string>
+  <string name="action_calculate">계산</string>
+  <string name="action_reset">초기화</string>
+  <string name="action_explain">설명</string>
+  <string name="action_hide_explanation">설명 숨기기</string>
+  <string name="unit_per_month">/월</string>
+  <string name="unit_year_short">년</string>
+  <string name="unit_percent_per_year">%/년</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">환영합니다</string>
+  <string name="onboarding_subtitle">몇 가지 질문에 답하면 앱을 더 잘 맞출 수 있어요. 그냥 둘러봐도 됩니다.</string>
+  <string name="onboarding_goal_title">주요 목표는 무엇인가요?</string>
+  <string name="onboarding_goal_retire">안정적으로 은퇴</string>
+  <string name="onboarding_goal_save">목표를 위한 저축</string>
+  <string name="onboarding_goal_grow">투자 성장</string>
+  <string name="onboarding_horizon_title">언제 돈이 필요하신가요?</string>
+  <string name="onboarding_horizon_soon">0–2년</string>
+  <string name="onboarding_horizon_mid">3–10년</string>
+  <string name="onboarding_horizon_long">10년+</string>
+  <string name="onboarding_risk_title">리스크는 어느 정도 괜찮나요?</string>
+  <string name="onboarding_risk_low">낮음(편안함)</string>
+  <string name="onboarding_risk_med">보통</string>
+  <string name="onboarding_risk_high">높음(변동성 OK)</string>
+
+  <string name="home_title">계산기</string>
+  <string name="home_compound">복리 성장</string>
+  <string name="home_savings">저축 목표</string>
+  <string name="home_retirement">은퇴</string>
+
+  <string name="explain_compound">복리는 이익에 다시 이익이 붙는 개념입니다. 시간이 지날수록 성장 속도가 빨라질 수 있어요.</string>
+  <string name="explain_swr">안전 인출률(SWR)은 포트폴리오에서 매년 얼마를 쓸 수 있는지에 대한 대략적인 기준입니다.</string>
+  <string name="explain_savings">저축 목표는 특정 시점까지 모으고 싶은 금액입니다. 매달 얼마가 필요한지 추정합니다.</string>
+  <string name="explain_retirement">필요할 수 있는 총 자산 규모를 추정합니다. 간단한 기준으로 인출률(SWR)을 사용합니다.</string>
+
+  <string name="compound_title">복리 성장</string>
+  <string name="compound_principal">시작 금액</string>
+  <string name="compound_monthly">월 납입액</string>
+  <string name="compound_return">연 수익률</string>
+  <string name="compound_years">기간(년)</string>
+  <string name="compound_inflation">인플레이션(선택)</string>
+  <string name="compound_result_final">최종 금액</string>
+  <string name="compound_result_contrib">총 납입액</string>
+  <string name="compound_result_gain">총 증가분</string>
+  <string name="compound_result_real">최종(인플레이션 반영)</string>
+
+  <string name="savings_title">저축 목표</string>
+  <string name="savings_goal_amount">목표 금액</string>
+  <string name="savings_current">현재 저축액</string>
+  <string name="savings_years">목표까지 년수</string>
+  <string name="savings_return">예상 연 수익률</string>
+  <string name="savings_result_monthly">필요 월 납입</string>
+
+  <string name="retirement_title">은퇴</string>
+  <string name="retirement_monthly_spend">은퇴 후 월 지출</string>
+  <string name="retirement_swr">안전 인출률(SWR)</string>
+  <string name="retirement_buffer">안전 여유</string>
+  <string name="retirement_result_target">목표 자산</string>
+  <string name="retirement_result_target_buffered">목표(여유 포함)</string>
+
+  <string name="ads_label">광고</string>
+</resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">తరువాత</string>
+  <string name="action_back">వెనక్కి</string>
+  <string name="action_skip">దాటవేయి</string>
+  <string name="action_continue">కొనసాగించు</string>
+  <string name="action_see_inside">కేవలం చూడండి</string>
+  <string name="action_start">ప్రారంభించు</string>
+  <string name="action_calculate">లెక్కించు</string>
+  <string name="action_reset">రిసెట్</string>
+  <string name="action_explain">వివరించు</string>
+  <string name="action_hide_explanation">వివరణ దాచు</string>
+  <string name="unit_per_month">/నెల</string>
+  <string name="unit_year_short">సం</string>
+  <string name="unit_percent_per_year">%/సం</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">స్వాగతం</string>
+  <string name="onboarding_subtitle">కొన్ని ప్రశ్నలకు సమాధానం ఇవ్వండి. లేదా లోపల ఏముందో మాత్రమే చూడండి.</string>
+  <string name="onboarding_goal_title">మీ ముఖ్య లక్ష్యం ఏమిటి?</string>
+  <string name="onboarding_goal_retire">నమ్మకంగా రిటైర్ కావాలి</string>
+  <string name="onboarding_goal_save">లక్ష్యానికి సేవ్ చేయాలి</string>
+  <string name="onboarding_goal_grow">ఇన్వెస్ట్మెంట్స్ పెంచాలి</string>
+  <string name="onboarding_horizon_title">డబ్బు ఎప్పుడు కావాలి?</string>
+  <string name="onboarding_horizon_soon">0–2 సంవత్సరాలు</string>
+  <string name="onboarding_horizon_mid">3–10 సంవత్సరాలు</string>
+  <string name="onboarding_horizon_long">10+ సంవత్సరాలు</string>
+  <string name="onboarding_risk_title">రిస్క్ గురించి మీరు ఎలా భావిస్తారు?</string>
+  <string name="onboarding_risk_low">తక్కువ (నిద్ర బాగుంటుంది)</string>
+  <string name="onboarding_risk_med">మధ్యస్థం</string>
+  <string name="onboarding_risk_high">ఎక్కువ (ఎత్తులు-పతనాలు ఓకే)</string>
+
+  <string name="home_title">కాల్క్యులేటర్లు</string>
+  <string name="home_compound">కాంపౌండ్ గ్రోత్</string>
+  <string name="home_savings">సేవింగ్స్ లక్ష్యం</string>
+  <string name="home_retirement">రిటైర్మెంట్</string>
+
+  <string name="explain_compound">కాంపౌండింగ్ అంటే: మీరు పొందిన లాభంపై మళ్లీ లాభం రావడం. కాలంతో వృద్ధి వేగంగా పెరుగుతుంది.</string>
+  <string name="explain_swr">SWR అనేది ఒక సాధారణ నియమం: పోర్ట్‌ఫోలియో నుంచి ఏడాదికి ఎంత ఖర్చు చేయవచ్చో అంచనా.</string>
+  <string name="explain_savings">సేవింగ్స్ లక్ష్యం అంటే ఒక తేదీకి కావలసిన మొత్తం. నెలకు ఎంత సేవ్ చేయాలో ఇది అంచనా వేస్తుంది.</string>
+  <string name="explain_retirement">రిటైర్మెంట్‌కు కావలసిన మొత్తం పోర్ట్‌ఫోలియోని ఇది అంచనా వేస్తుంది. SWR అనే సింపుల్ రూల్ ఉపయోగిస్తుంది.</string>
+
+  <string name="compound_title">కాంపౌండ్ గ్రోత్</string>
+  <string name="compound_principal">ప్రారంభ మొత్తం</string>
+  <string name="compound_monthly">నెలవారీ పెట్టుబడి</string>
+  <string name="compound_return">వార్షిక రిటర్న్</string>
+  <string name="compound_years">సంవత్సరాలు</string>
+  <string name="compound_inflation">ద్రవ్యోల్బణం (ఐచ్ఛికం)</string>
+  <string name="compound_result_final">చివరి విలువ</string>
+  <string name="compound_result_contrib">మొత్తం జమలు</string>
+  <string name="compound_result_gain">మొత్తం లాభం</string>
+  <string name="compound_result_real">చివరి (ద్రవ్యోల్బణం తరువాత)</string>
+
+  <string name="savings_title">సేవింగ్స్ లక్ష్యం</string>
+  <string name="savings_goal_amount">లక్ష్య మొత్తం</string>
+  <string name="savings_current">ఇప్పటికే సేవ్ చేసినది</string>
+  <string name="savings_years">లక్ష్యం వరకు సంవత్సరాలు</string>
+  <string name="savings_return">అంచనా వార్షిక రిటర్న్</string>
+  <string name="savings_result_monthly">నెలకు అవసరం</string>
+
+  <string name="retirement_title">రిటైర్మెంట్</string>
+  <string name="retirement_monthly_spend">రిటైర్మెంట్‌లో నెల ఖర్చు</string>
+  <string name="retirement_swr">SWR</string>
+  <string name="retirement_buffer">భద్రతా బఫర్</string>
+  <string name="retirement_result_target">లక్ష్య పోర్ట్‌ఫోలియో</string>
+  <string name="retirement_result_target_buffered">లక్ష్యం (బఫర్‌తో)</string>
+
+  <string name="ads_label">ప్రకటన</string>
+</resources>

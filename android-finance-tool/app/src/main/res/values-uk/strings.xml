@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">BroFinance</string>
+  <string name="action_next">Далі</string>
+  <string name="action_back">Назад</string>
+  <string name="action_skip">Пропустити</string>
+  <string name="action_continue">Продовжити</string>
+  <string name="action_see_inside">Просто подивитися</string>
+  <string name="action_start">Старт</string>
+  <string name="action_calculate">Розрахувати</string>
+  <string name="action_reset">Скинути</string>
+  <string name="action_explain">Пояснити</string>
+  <string name="action_hide_explanation">Сховати пояснення</string>
+  <string name="unit_per_month">/міс</string>
+  <string name="unit_year_short">р</string>
+  <string name="unit_percent_per_year">%/рік</string>
+  <string name="currency_symbol">$</string>
+
+  <string name="onboarding_title">Ласкаво просимо</string>
+  <string name="onboarding_subtitle">Відповідай на кілька питань — ми підлаштуємо застосунок. Або просто подивись, що всередині.</string>
+  <string name="onboarding_goal_title">Яка головна ціль?</string>
+  <string name="onboarding_goal_retire">Впевнено вийти на пенсію</string>
+  <string name="onboarding_goal_save">Накопичити на ціль</string>
+  <string name="onboarding_goal_grow">Примножувати інвестиції</string>
+  <string name="onboarding_horizon_title">Коли потрібні гроші?</string>
+  <string name="onboarding_horizon_soon">0–2 роки</string>
+  <string name="onboarding_horizon_mid">3–10 років</string>
+  <string name="onboarding_horizon_long">10+ років</string>
+  <string name="onboarding_risk_title">Як ти ставишся до ризику?</string>
+  <string name="onboarding_risk_low">Низький (спати спокійно)</string>
+  <string name="onboarding_risk_med">Середній</string>
+  <string name="onboarding_risk_high">Високий (коливання ок)</string>
+
+  <string name="home_title">Калькулятори</string>
+  <string name="home_compound">Складний відсоток</string>
+  <string name="home_savings">Ціль накопичень</string>
+  <string name="home_retirement">Пенсія</string>
+
+  <string name="explain_compound">Складний відсоток — це коли дохід нараховується і на попередній дохід. З часом ріст може прискорюватися.</string>
+  <string name="explain_swr">Безпечна норма вилучення (SWR) — приблизне правило, скільки можна витрачати на рік із портфеля.</string>
+  <string name="explain_savings">Ціль накопичень — сума на певну дату. Калькулятор оцінює, скільки відкладати щомісяця.</string>
+  <string name="explain_retirement">Оцінює, який капітал може знадобитися. Використовує SWR як просте наближення.</string>
+
+  <string name="compound_title">Складний відсоток</string>
+  <string name="compound_principal">Стартова сума</string>
+  <string name="compound_monthly">Щомісячний внесок</string>
+  <string name="compound_return">Дохідність на рік</string>
+  <string name="compound_years">Роки</string>
+  <string name="compound_inflation">Інфляція (необовʼязково)</string>
+  <string name="compound_result_final">Підсумкова сума</string>
+  <string name="compound_result_contrib">Внески всього</string>
+  <string name="compound_result_gain">Приріст всього</string>
+  <string name="compound_result_real">Підсумок (з урахуванням інфляції)</string>
+
+  <string name="savings_title">Ціль накопичень</string>
+  <string name="savings_goal_amount">Сума цілі</string>
+  <string name="savings_current">Вже накопичено</string>
+  <string name="savings_years">Років до цілі</string>
+  <string name="savings_return">Очікувана дохідність на рік</string>
+  <string name="savings_result_monthly">Потрібно на місяць</string>
+
+  <string name="retirement_title">Пенсія</string>
+  <string name="retirement_monthly_spend">Витрати на місяць на пенсії</string>
+  <string name="retirement_swr">Норма вилучення (SWR)</string>
+  <string name="retirement_buffer">Запас</string>
+  <string name="retirement_result_target">Цільовий капітал</string>
+  <string name="retirement_result_target_buffered">Ціль (із запасом)</string>
+
+  <string name="ads_label">Реклама</string>
+</resources>
