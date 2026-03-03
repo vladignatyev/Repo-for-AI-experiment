@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.MaterialTheme
@@ -37,8 +38,11 @@ fun SavingsGoalScreen() {
   ) {
     Text(text = stringResource(R.string.savings_title), style = MaterialTheme.typography.titleLarge)
 
-    val sym = stringResource(R.string.currency_symbol)
-    val perMo = stringResource(R.string.unit_per_month)
+    // Big result, pinned above the scrollable form.
+    ResultCard(
+      primaryLabel = stringResource(R.string.savings_result_monthly),
+      primaryValue = fmtMoney(state.monthlyNeeded) + stringResource(R.string.unit_per_month),
+    )
 
     if (state.explain) {
       Card {
@@ -50,26 +54,69 @@ fun SavingsGoalScreen() {
       }
     }
 
-    LabeledNumberField(R.string.savings_goal_amount, state.goalAmount, vm::updateGoal, suffix = sym)
-    LabeledNumberField(R.string.savings_current, state.alreadySaved, vm::updateSaved, suffix = sym)
+    val sym = stringResource(R.string.currency_symbol)
     val pctYr = stringResource(R.string.unit_percent_per_year)
     val yShort = stringResource(R.string.unit_year_short)
 
-    LabeledNumberField(R.string.savings_years, state.years, vm::updateYears, suffix = yShort)
-    LabeledNumberField(R.string.savings_return, state.annualReturnPct, vm::updateReturn, suffix = pctYr)
-
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-      Button(onClick = vm::calculate) { Text(stringResource(R.string.action_calculate)) }
-      OutlinedButton(onClick = vm::reset) { Text(stringResource(R.string.action_reset)) }
-      OutlinedButton(onClick = vm::toggleExplain) {
-        Text(stringResource(if (state.explain) R.string.action_hide_explanation else R.string.action_explain))
+    LazyColumn(
+      modifier = Modifier.weight(1f),
+      verticalArrangement = Arrangement.spacedBy(10.dp)
+    ) {
+      item {
+        LabeledNumberField(
+          labelRes = R.string.savings_goal_amount,
+          descriptionRes = R.string.savings_goal_amount_desc,
+          value = state.goalAmount,
+          onValueChange = vm::updateGoal,
+          suffix = sym,
+        )
+      }
+      item {
+        LabeledNumberField(
+          labelRes = R.string.savings_current,
+          descriptionRes = R.string.savings_current_desc,
+          value = state.alreadySaved,
+          onValueChange = vm::updateSaved,
+          suffix = sym,
+        )
+      }
+      item {
+        LabeledNumberField(
+          labelRes = R.string.savings_years,
+          descriptionRes = R.string.savings_years_desc,
+          value = state.years,
+          onValueChange = vm::updateYears,
+          suffix = yShort,
+        )
+      }
+      item {
+        LabeledNumberField(
+          labelRes = R.string.savings_return,
+          descriptionRes = R.string.savings_return_desc,
+          value = state.annualReturnPct,
+          onValueChange = vm::updateReturn,
+          suffix = pctYr,
+        )
+      }
+      item {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+          Button(onClick = vm::calculate) { Text(stringResource(R.string.action_calculate)) }
+          OutlinedButton(onClick = vm::reset) { Text(stringResource(R.string.action_reset)) }
+          OutlinedButton(onClick = vm::toggleExplain) {
+            Text(stringResource(if (state.explain) R.string.action_hide_explanation else R.string.action_explain))
+          }
+        }
       }
     }
+  }
+}
 
-    Card {
-      Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
-        Text("${stringResource(R.string.savings_result_monthly)}: ${fmtMoney(state.monthlyNeeded)}${stringResource(R.string.unit_per_month)}")
-      }
+@Composable
+private fun ResultCard(primaryLabel: String, primaryValue: String) {
+  Card {
+    Column(modifier = Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+      Text(text = primaryLabel, style = MaterialTheme.typography.labelMedium)
+      Text(text = primaryValue, style = MaterialTheme.typography.headlineMedium)
     }
   }
 }

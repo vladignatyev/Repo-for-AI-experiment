@@ -49,10 +49,15 @@
   <!-- Compound -->
   <string name="compound_title">Compound growth</string>
   <string name="compound_principal">Starting amount</string>
+  <string name="compound_principal_desc">Money you have invested today.</string>
   <string name="compound_monthly">Monthly contribution</string>
+  <string name="compound_monthly_desc">How much you add each month (like an auto-transfer).</string>
   <string name="compound_return">Annual return</string>
+  <string name="compound_return_desc">Expected average growth per year. Example: 7 means +7% per year.</string>
   <string name="compound_years">Years</string>
+  <string name="compound_years_desc">How long you keep investing.</string>
   <string name="compound_inflation">Inflation (optional)</string>
+  <string name="compound_inflation_desc">Optional. If set, we also show a “real” value in today’s money.</string>
   <string name="compound_result_final">Final value</string>
   <string name="compound_result_contrib">Total contributions</string>
   <string name="compound_result_gain">Total gain</string>
@@ -61,16 +66,23 @@
   <!-- Savings -->
   <string name="savings_title">Savings goal</string>
   <string name="savings_goal_amount">Goal amount</string>
+  <string name="savings_goal_amount_desc">The amount you want to have by the deadline.</string>
   <string name="savings_current">Already saved</string>
+  <string name="savings_current_desc">How much you already have saved for this goal.</string>
   <string name="savings_years">Years to goal</string>
+  <string name="savings_years_desc">Time until your target date.</string>
   <string name="savings_return">Expected annual return</string>
+  <string name="savings_return_desc">If you invest the savings, what yearly growth do you expect?</string>
   <string name="savings_result_monthly">Monthly needed</string>
 
   <!-- Retirement -->
   <string name="retirement_title">Retirement</string>
   <string name="retirement_monthly_spend">Monthly spending in retirement</string>
+  <string name="retirement_monthly_spend_desc">How much you plan to spend each month after you stop working.</string>
   <string name="retirement_swr">Safe withdrawal rate (SWR)</string>
+  <string name="retirement_swr_desc">A simple rule: if SWR is 4%, you can spend about 4% of your portfolio per year.</string>
   <string name="retirement_buffer">Safety buffer</string>
+  <string name="retirement_buffer_desc">Extra margin on top of the target, for safety (example: 15%).</string>
   <string name="retirement_result_target">Target portfolio</string>
   <string name="retirement_result_target_buffered">Target (with buffer)</string>
 
