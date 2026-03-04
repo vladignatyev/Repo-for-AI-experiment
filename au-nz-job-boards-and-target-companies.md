@@ -94,13 +94,61 @@
 
 ---
 
-## How to use this list (fast workflow)
-1) Start with **Anchor companies** + **marketplaces/fintech** (highest density of relevant roles).
-2) For each company, find the right job family: Platform, Backend, Data/ML, Infra, Developer Experience.
-3) Tailor a 3–5 paragraph cover letter: (a) why this company, (b) 2–3 matching wins, (c) tech stack match (Go/Python/TS), (d) links.
+## Remote-friendly Top 25 (AU/NZ SaaS + marketplaces, no visa)
 
-If you tell me:
-- which city/timezone (Sydney/Melbourne/Brisbane/Auckland/Wellington),
-- visa/work rights (important for AU/NZ),
-- preferred domain (fintech/marketplace/devtools),
-I’ll narrow this into a **“top 25”** with priority order + suggested pitch bullets per company.
+> **Note:** Many AU/NZ companies hire remote only **within** AU/NZ for legal/payroll reasons.
+> With *no visa*, prioritize companies that are explicitly **global remote** or hire via **EOR** (Remote/Deel/Oyster).
+
+### Tier 1 — strong fit (SaaS + marketplace-ish; known to hire internationally)
+1. Atlassian — https://www.atlassian.com/company/careers
+2. Canva — https://www.canva.com/careers/
+3. SafetyCulture — https://safetyculture.com/careers/
+4. Culture Amp — https://www.cultureamp.com/careers
+5. Airwallex — https://www.airwallex.com/careers
+6. Wise — https://wise.jobs/
+7. Xero — https://www.xero.com/about/careers/
+8. SEEK — https://www.seek.com.au/work-for-seek
+9. REA Group — https://www.rea-group.com/careers/
+10. Domain — https://www.domain.com.au/group/careers/
+
+### Tier 2 — good targets (check location constraints; many do remote in region)
+11. carsales — https://careers.carsales.com.au/
+12. Freelancer.com — https://www.freelancer.com/about/careers/
+13. Trade Me (NZ) — https://www.trademe.co.nz/a/jobs
+14. Serko (NZ) — https://www.serko.com/careers/
+15. Vista Group (NZ) — https://www.vistagroup.co.nz/careers/
+16. Pushpay (NZ) — https://pushpay.com/careers/
+17. Crimson Education (NZ) — https://www.crimsoneducation.org/careers/
+18. Rocket Lab (NZ/US) — https://www.rocketlabusa.com/careers/
+19. Sharesies (NZ) — https://sharesies.com/careers
+20. Datacom (NZ) — https://careers.datacom.com/
+
+### Tier 3 — big co’s (often require local work rights; include if they accept contractors/EOR)
+21. Telstra — https://careers.telstra.com/
+22. Optus — https://www.optus.com.au/about/careers
+23. Woolworths Group — https://www.wowcareers.com.au/
+24. Coles — https://careers.colesgroup.com.au/
+25. Qantas — https://careers.qantas.com/
+
+### Where to apply (remote search filters)
+- LinkedIn Jobs: set location to "Remote" and search company-by-company.
+- Wellfound: filter **Remote** + company stage.
+- RemoteOK: filter by **Engineering** and keyword (Go, Python, Backend).
+
+### Cover letter “angles” that work for SaaS/marketplaces
+- Reliability at scale: latency, availability, cost control.
+- Payments/billing/subscriptions (SaaS) or search/matching/ranking (marketplaces).
+- Platform engineering: CI/CD, observability, incident response, SLOs.
+- Strong backend + “product empathy”: Go/Python services + Next.js for admin/internal tools.
+
+If you tell me your preferred timezone overlap (e.g., APAC hours vs EU/US) and your seniority target (Senior/Staff), I’ll write:
+- a **one-page master cover letter** +
+- 3 variants (SaaS / marketplace / infra-platform) +
+- a short “pitch paragraph” per Tier‑1 company.
+
+---
+
+## How to use this list (fast workflow)
+1) Start with **Tier 1**; apply to 5–8 companies/week.
+2) For each company, find roles in: Backend/Platform/Data/Infra/Developer Experience.
+3) Tailor a short cover letter: (a) why them, (b) 2–3 relevant wins, (c) stack match (Go/Python/TS), (d) links.
